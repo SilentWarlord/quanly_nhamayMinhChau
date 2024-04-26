@@ -8,5 +8,8 @@ namespace WindowsFormsApp1.Models
 {
     internal class SanPham
     {
+        string maSanPham {  get; set; }
+        string tenSanPham { get; set; }
+
     }
 }
