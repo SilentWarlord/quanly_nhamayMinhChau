@@ -51,6 +51,7 @@
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Service\Connection.cs" />
+    <Compile Include="Service\KhachHangService.cs" />
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Views\Home.cs">
       <SubType>Form</SubType>

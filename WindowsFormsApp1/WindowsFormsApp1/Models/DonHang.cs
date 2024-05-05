@@ -8,10 +8,10 @@ namespace WindowsFormsApp1.Models
 {
     internal class DonHang
     {
-        string maDonHang {  get; set; }
-        string maKhachHang {  get; set; }
-        string maSanPham {  get; set; }
-        string moTa {  get; set; }
-        string trangThai {  get; set; }
+        public string maDonHang {  get; set; }
+        public string maKhachHang {  get; set; }
+        public string maSanPham {  get; set; }
+        public string moTa {  get; set; }
+        public string trangThai {  get; set; }
     }
 }

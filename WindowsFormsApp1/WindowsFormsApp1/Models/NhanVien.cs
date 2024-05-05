@@ -9,13 +9,13 @@ namespace WindowsFormsApp1.Models
 {
     internal class NhanVien
     {
-        string maNhanVien {  get; set; }
-        string tenNhanVien { get; set;}
-        string SDT { get; set; }
-        string password {  get; set; }
-        string queQuan {  get; set; }
-        DateTime ngaySinh { get; set; }
-        int luong {  get; set; }    
+        public string maNhanVien {  get; set; }
+        public string tenNhanVien { get; set;}
+        public string SDT { get; set; }
+        public string password {  get; set; }
+        public string queQuan {  get; set; }
+        public DateTime ngaySinh { get; set; }
+        public int luong {  get; set; }    
 
     }
 }

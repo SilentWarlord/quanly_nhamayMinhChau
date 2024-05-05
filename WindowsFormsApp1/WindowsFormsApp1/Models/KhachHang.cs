@@ -8,10 +8,10 @@ namespace WindowsFormsApp1.Models
 {
     internal class KhachHang
     {
-        string maKhachHang {  get; set; }
-        string tenKhachHang { get; set;}
-        string SDT {  get; set; }
-        string diaChi {  get; set; }
-        DateTime ngaySinh { get; set; }
+        public string maKhachHang {  get; set; }
+        public string tenKhachHang { get; set;}
+        public string SDT {  get; set; }
+        public string diaChi {  get; set; }
+        public DateTime ngaySinh { get; set; }
     }
 }
