@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\LoginControler.cs" />
     <Compile Include="forms\Forgot_pass_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +79,7 @@
     </Compile>
     <Compile Include="Models\DonHang.cs" />
     <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\NguyenLieu.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Program.cs" />
@@ -189,8 +191,6 @@
   <ItemGroup>
     <None Include="resources\datsp_icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
