@@ -48,5 +48,14 @@ namespace WindowsFormsApp1.Service
                 string query = "";
             }
         }
+
+        public void UpdateKhachHang()
+        {
+
+        }
+        public void DeleteKhachHang()
+        {
+
+        }
     }
 }
