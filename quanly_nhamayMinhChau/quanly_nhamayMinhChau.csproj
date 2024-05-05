@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,12 @@
     </Compile>
     <Compile Include="forms\Forgot_pass_form.Designer.cs">
       <DependentUpon>Forgot_pass_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\Loginform.cs">
       <SubType>Form</SubType>
@@ -88,6 +95,12 @@
     </Compile>
     <Compile Include="usercontrol\MainTheme.Designer.cs">
       <DependentUpon>MainTheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usercontrol\motaSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\motaSP.Designer.cs">
+      <DependentUpon>motaSP.cs</DependentUpon>
     </Compile>
     <Compile Include="usercontrol\QLHoaDon.cs">
       <SubType>UserControl</SubType>
@@ -128,6 +141,9 @@
     <EmbeddedResource Include="forms\Forgot_pass_form.resx">
       <DependentUpon>Forgot_pass_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\MainTheme.resx">
       <DependentUpon>MainTheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\motaSP.resx">
+      <DependentUpon>motaSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\QLHoaDon.resx">
       <DependentUpon>QLHoaDon.cs</DependentUpon>

@@ -44,15 +44,15 @@ namespace quanly_nhamayMinhChau
 
         private void checkBox1_CheckStateChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (hienthi_checkbox.Checked)
             {
-                textBox2.UseSystemPasswordChar = false;
-                textBox3.UseSystemPasswordChar = false;
+                pass_textbox.UseSystemPasswordChar = false;
+                confirmpass_textbox.UseSystemPasswordChar = false;
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true;
-                textBox3.UseSystemPasswordChar = true;
+                pass_textbox.UseSystemPasswordChar = true;
+                confirmpass_textbox.UseSystemPasswordChar = true;
             }
         }
     }

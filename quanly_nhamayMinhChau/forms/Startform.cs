@@ -19,15 +19,15 @@ namespace quanly_nhamayMinhChau
 
         public void loadform(object Form)
         {
-            if (this.panel2.Controls.Count > 0)
+            if (this.main_panel.Controls.Count > 0)
             {
-                this.panel2.Controls.RemoveAt(0);
+                this.main_panel.Controls.RemoveAt(0);
             }
             Form f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
-            this.panel2.Controls.Add(f);
-            this.panel2.Tag = f;
+            this.main_panel.Controls.Add(f);
+            this.main_panel.Tag = f;
             f.Show();
 
 

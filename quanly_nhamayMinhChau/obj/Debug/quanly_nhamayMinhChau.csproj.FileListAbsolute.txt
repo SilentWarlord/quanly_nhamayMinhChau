@@ -19,3 +19,5 @@ E:\TDTu\TIEU_LUAN\CMPhanMEM\veston\quanly_nhamayMinhChau\obj\Debug\quanly_nhamay
 E:\TDTu\TIEU_LUAN\CMPhanMEM\veston\quanly_nhamayMinhChau\obj\Debug\quanly_nhamayMinhChau.usercontrol.QLNhanVien.resources
 E:\TDTu\TIEU_LUAN\CMPhanMEM\veston\quanly_nhamayMinhChau\obj\Debug\quanly_nhamayMinhChau.usercontrol.QuanLyNVL.resources
 E:\TDTu\TIEU_LUAN\CMPhanMEM\veston\quanly_nhamayMinhChau\obj\Debug\quanly_nhamayMinhChau.usercontrol.ThongKe.resources
+E:\TDTu\TIEU_LUAN\CMPhanMEM\veston\quanly_nhamayMinhChau\obj\Debug\quanly_nhamayMinhChau.usercontrol.motaSP.resources
+E:\TDTu\TIEU_LUAN\CMPhanMEM\veston\quanly_nhamayMinhChau\obj\Debug\quanly_nhamayMinhChau.forms.print_form.resources

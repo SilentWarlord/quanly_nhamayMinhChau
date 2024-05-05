@@ -19,15 +19,15 @@ namespace quanly_nhamayMinhChau
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (hienthimk_checkbox.Checked)
             {
-                textBox3.UseSystemPasswordChar = false;
-                textBox4.UseSystemPasswordChar = false;
+                pass_textBox.UseSystemPasswordChar = false;
+                confirmpass_textBox.UseSystemPasswordChar = false;
             }
             else
             {
-                textBox3.UseSystemPasswordChar = true;
-                textBox4.UseSystemPasswordChar = true;
+                pass_textBox.UseSystemPasswordChar = true;
+                confirmpass_textBox.UseSystemPasswordChar = true;
             }
         }
     }

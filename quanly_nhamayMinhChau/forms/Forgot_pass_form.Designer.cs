@@ -29,128 +29,128 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Forgot_pass_form));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.main_panel = new System.Windows.Forms.Panel();
+            this.hienthi_checkbox = new System.Windows.Forms.CheckBox();
+            this.confirmpass_label = new System.Windows.Forms.Label();
+            this.head_label = new System.Windows.Forms.Label();
+            this.confirmpass_textbox = new System.Windows.Forms.TextBox();
+            this.username_textbox = new System.Windows.Forms.TextBox();
+            this.pass_label = new System.Windows.Forms.Label();
+            this.xacnhan_button = new System.Windows.Forms.Button();
+            this.pass_textbox = new System.Windows.Forms.TextBox();
+            this.username_label = new System.Windows.Forms.Label();
+            this.main_panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // main_panel
             // 
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(145, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 341);
-            this.panel1.TabIndex = 0;
+            this.main_panel.Controls.Add(this.hienthi_checkbox);
+            this.main_panel.Controls.Add(this.confirmpass_label);
+            this.main_panel.Controls.Add(this.head_label);
+            this.main_panel.Controls.Add(this.confirmpass_textbox);
+            this.main_panel.Controls.Add(this.username_textbox);
+            this.main_panel.Controls.Add(this.pass_label);
+            this.main_panel.Controls.Add(this.xacnhan_button);
+            this.main_panel.Controls.Add(this.pass_textbox);
+            this.main_panel.Controls.Add(this.username_label);
+            this.main_panel.Location = new System.Drawing.Point(145, 35);
+            this.main_panel.Name = "main_panel";
+            this.main_panel.Size = new System.Drawing.Size(540, 341);
+            this.main_panel.TabIndex = 0;
             // 
-            // checkBox1
+            // hienthi_checkbox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.checkBox1.Location = new System.Drawing.Point(57, 253);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(146, 32);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "Hiện mật khẩu";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.hienthi_checkbox.AutoSize = true;
+            this.hienthi_checkbox.Font = new System.Drawing.Font("Open Sans Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hienthi_checkbox.ForeColor = System.Drawing.Color.GhostWhite;
+            this.hienthi_checkbox.Location = new System.Drawing.Point(57, 253);
+            this.hienthi_checkbox.Name = "hienthi_checkbox";
+            this.hienthi_checkbox.Size = new System.Drawing.Size(146, 32);
+            this.hienthi_checkbox.TabIndex = 25;
+            this.hienthi_checkbox.Text = "Hiện mật khẩu";
+            this.hienthi_checkbox.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // confirmpass_label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label4.Location = new System.Drawing.Point(51, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 33);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Confirm pass";
+            this.confirmpass_label.AutoSize = true;
+            this.confirmpass_label.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold);
+            this.confirmpass_label.ForeColor = System.Drawing.Color.GhostWhite;
+            this.confirmpass_label.Location = new System.Drawing.Point(51, 203);
+            this.confirmpass_label.Name = "confirmpass_label";
+            this.confirmpass_label.Size = new System.Drawing.Size(131, 33);
+            this.confirmpass_label.TabIndex = 24;
+            this.confirmpass_label.Text = "Confirm pass";
             // 
-            // label1
+            // head_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans Condensed", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label1.Location = new System.Drawing.Point(184, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 54);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Đổi mật khẩu";
+            this.head_label.AutoSize = true;
+            this.head_label.Font = new System.Drawing.Font("Open Sans Condensed", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.head_label.ForeColor = System.Drawing.Color.GhostWhite;
+            this.head_label.Location = new System.Drawing.Point(184, 15);
+            this.head_label.Name = "head_label";
+            this.head_label.Size = new System.Drawing.Size(215, 54);
+            this.head_label.TabIndex = 17;
+            this.head_label.Text = "Đổi mật khẩu";
             // 
-            // textBox3
+            // confirmpass_textbox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Open Sans", 13.8F);
-            this.textBox3.Location = new System.Drawing.Point(219, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(271, 39);
-            this.textBox3.TabIndex = 23;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.confirmpass_textbox.Font = new System.Drawing.Font("Open Sans", 13.8F);
+            this.confirmpass_textbox.Location = new System.Drawing.Point(219, 202);
+            this.confirmpass_textbox.Name = "confirmpass_textbox";
+            this.confirmpass_textbox.Size = new System.Drawing.Size(271, 39);
+            this.confirmpass_textbox.TabIndex = 23;
+            this.confirmpass_textbox.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // username_textbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Open Sans", 13.8F);
-            this.textBox1.Location = new System.Drawing.Point(219, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 39);
-            this.textBox1.TabIndex = 18;
+            this.username_textbox.Font = new System.Drawing.Font("Open Sans", 13.8F);
+            this.username_textbox.Location = new System.Drawing.Point(219, 92);
+            this.username_textbox.Name = "username_textbox";
+            this.username_textbox.Size = new System.Drawing.Size(271, 39);
+            this.username_textbox.TabIndex = 18;
             // 
-            // label3
+            // pass_label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label3.Location = new System.Drawing.Point(51, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 33);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Password";
+            this.pass_label.AutoSize = true;
+            this.pass_label.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold);
+            this.pass_label.ForeColor = System.Drawing.Color.GhostWhite;
+            this.pass_label.Location = new System.Drawing.Point(51, 148);
+            this.pass_label.Name = "pass_label";
+            this.pass_label.Size = new System.Drawing.Size(102, 33);
+            this.pass_label.TabIndex = 22;
+            this.pass_label.Text = "Password";
             // 
-            // button1
+            // xacnhan_button
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Moccasin;
-            this.button1.Location = new System.Drawing.Point(219, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 44);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Xác nhận";
-            this.button1.UseVisualStyleBackColor = false;
+            this.xacnhan_button.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.xacnhan_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold);
+            this.xacnhan_button.ForeColor = System.Drawing.Color.Moccasin;
+            this.xacnhan_button.Location = new System.Drawing.Point(219, 282);
+            this.xacnhan_button.Name = "xacnhan_button";
+            this.xacnhan_button.Size = new System.Drawing.Size(170, 44);
+            this.xacnhan_button.TabIndex = 19;
+            this.xacnhan_button.Text = "Xác nhận";
+            this.xacnhan_button.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // pass_textbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Open Sans", 13.8F);
-            this.textBox2.Location = new System.Drawing.Point(219, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(271, 39);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.pass_textbox.Font = new System.Drawing.Font("Open Sans", 13.8F);
+            this.pass_textbox.Location = new System.Drawing.Point(219, 147);
+            this.pass_textbox.Name = "pass_textbox";
+            this.pass_textbox.Size = new System.Drawing.Size(271, 39);
+            this.pass_textbox.TabIndex = 21;
+            this.pass_textbox.UseSystemPasswordChar = true;
             // 
-            // label2
+            // username_label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label2.Location = new System.Drawing.Point(51, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 33);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Username";
+            this.username_label.AutoSize = true;
+            this.username_label.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold);
+            this.username_label.ForeColor = System.Drawing.Color.GhostWhite;
+            this.username_label.Location = new System.Drawing.Point(51, 93);
+            this.username_label.Name = "username_label";
+            this.username_label.Size = new System.Drawing.Size(107, 33);
+            this.username_label.TabIndex = 20;
+            this.username_label.Text = "Username";
             // 
             // Forgot_pass_form
             // 
@@ -160,28 +160,28 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(818, 406);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.main_panel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Forgot_pass_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoiMatKhau";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.main_panel.ResumeLayout(false);
+            this.main_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel main_panel;
+        private System.Windows.Forms.CheckBox hienthi_checkbox;
+        private System.Windows.Forms.Label confirmpass_label;
+        private System.Windows.Forms.Label head_label;
+        private System.Windows.Forms.TextBox confirmpass_textbox;
+        private System.Windows.Forms.TextBox username_textbox;
+        private System.Windows.Forms.Label pass_label;
+        private System.Windows.Forms.Button xacnhan_button;
+        private System.Windows.Forms.TextBox pass_textbox;
+        private System.Windows.Forms.Label username_label;
     }
 }

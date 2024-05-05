@@ -45,7 +45,10 @@
             this.qlkhachhang_usercontrol = new quanly_nhamayMinhChau.usercontrol.QLKhachHang();
             this.qlhoadon_usercontrol = new quanly_nhamayMinhChau.usercontrol.QLHoaDon();
             this.sp_usercontrol = new quanly_nhamayMinhChau.usercontrol.SP();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Listchucnang_panel.SuspendLayout();
+            this.logo_panel.SuspendLayout();
             this.main_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +75,8 @@
             this.logo_panel.BackColor = System.Drawing.Color.Honeydew;
             this.logo_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo_panel.BackgroundImage")));
             this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logo_panel.Controls.Add(this.label2);
+            this.logo_panel.Controls.Add(this.label1);
             this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logo_panel.Location = new System.Drawing.Point(0, 0);
             this.logo_panel.Name = "logo_panel";
@@ -171,7 +176,7 @@
             this.SP__button.Name = "SP__button";
             this.SP__button.Size = new System.Drawing.Size(399, 81);
             this.SP__button.TabIndex = 1;
-            this.SP__button.Text = "Đặt sản phẩm";
+            this.SP__button.Text = "Sản phẩm";
             this.SP__button.UseVisualStyleBackColor = false;
             this.SP__button.Click += new System.EventHandler(this.SP__button_Click);
             // 
@@ -251,6 +256,26 @@
             this.sp_usercontrol.Size = new System.Drawing.Size(1180, 875);
             this.sp_usercontrol.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Freestyle Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 52);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Nhà may";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Freestyle Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(244, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 52);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Minh Châu";
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,11 +286,12 @@
             this.Controls.Add(this.Listchucnang_panel);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Mainform";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Mainform";
             this.Load += new System.EventHandler(this.Mainform_Load);
             this.Listchucnang_panel.ResumeLayout(false);
+            this.logo_panel.ResumeLayout(false);
+            this.logo_panel.PerformLayout();
             this.main_panel.ResumeLayout(false);
             this.main_panel.PerformLayout();
             this.ResumeLayout(false);
@@ -290,5 +316,7 @@
         private usercontrol.QLNhanVien qlnhanvien_usercontrol;
         private usercontrol.ThongKe thongke_usercontrol;
         private usercontrol.MainTheme maintheme_usercontrol;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

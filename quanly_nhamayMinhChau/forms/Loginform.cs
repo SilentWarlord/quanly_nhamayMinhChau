@@ -58,13 +58,13 @@ namespace quanly_nhamayMinhChau
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (hienthi_checkbox.Checked)
             {
-                textBox2.UseSystemPasswordChar = false;
+                pass_textBox.UseSystemPasswordChar = false;
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true;
+                pass_textBox.UseSystemPasswordChar = true;
             }
         }
 
