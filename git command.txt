@@ -1,4 +1,0 @@
-git pull origin
-git add .
-git commit -m "sdsdsd"
-git push
