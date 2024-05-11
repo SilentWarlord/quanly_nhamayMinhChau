@@ -1,4 +1,5 @@
-﻿using quanly_nhamayMinhChau.usercontrol;
+﻿using quanly_nhamayMinhChau.Service;
+using quanly_nhamayMinhChau.usercontrol;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

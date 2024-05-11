@@ -1,12 +1,13 @@
-﻿using System;
+﻿using quanly_nhamayMinhChau.usercontrol;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Models;
+using quanly_nhamayMinhChau.Models;
 
-namespace WindowsFormsApp1.Service
+namespace quanly_nhamayMinhChau.Service
 {
     internal class KhachHangService
     {
@@ -14,12 +15,12 @@ namespace WindowsFormsApp1.Service
         string lastid;
         SqlConnection conn;
 
-        public List<KhachHang> GetKhachHang()
+        public List<KhachHang> GetAll()
         {
             list = new List<KhachHang>();
             using(conn = Connection.GetConnection())
             {
-                string query = "SELECT * FROM ";
+                string query = "SELECT * FROM KhachHang ";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 conn.Open();
@@ -41,21 +42,61 @@ namespace WindowsFormsApp1.Service
             return list;
         }
 
-        public void AddKhachHang(string maKhachHang, string tenKhachHang, string SDT, string diaChi, DateTime ngaySinh )
+        public void Add(KhachHang khachHang)
         {
             using(conn = Connection.GetConnection())
             {
-                string query = "";
+                string query = "INSERT INTO KhachHang VALUE(@maKhachHang,@tenKhachHang,@SDT,@diaChi,@ngaySinh) ";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@maKhachHang",khachHang.maKhachHang);
+                cmd.Parameters.AddWithValue("@tenKhachHang", khachHang.tenKhachHang);
+                cmd.Parameters.AddWithValue("@SDT", khachHang.SDT);
+                cmd.Parameters.AddWithValue("@diaChi", khachHang.diaChi);
+                cmd.Parameters.AddWithValue("@ngaySinh", khachHang.ngaySinh);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+
             }
         }
 
-        public void UpdateKhachHang()
+        public void Update(KhachHang khachHang)
         {
+            using (conn = Connection.GetConnection()) 
+            {
+                string query = "UPDATE KhachHang SET tenKhachHang = @tenKhachHang,SDT = @SDT,diaChi = @diaChi,ngaySinh = @ngaySinh WHERE maKhachHang = @maKhachHang";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@maKhachHang", khachHang.maKhachHang);
+                cmd.Parameters.AddWithValue("@tenKhachHang", khachHang.tenKhachHang);
+                cmd.Parameters.AddWithValue("@SDT", khachHang.SDT);
+                cmd.Parameters.AddWithValue("@diaChi", khachHang.diaChi);
+                cmd.Parameters.AddWithValue("@ngaySinh", khachHang.ngaySinh);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+            }
 
         }
-        public void DeleteKhachHang()
+        public void Delete(string maKhachHang)
         {
+            using (conn = Connection.GetConnection()) 
+            {
+                string query = "DELETE * FROM KhachHang WHERE maKhachHang = @maKhachHang";
+                SqlCommand cmd = new SqlCommand(query, conn);
 
+                cmd.Parameters.AddWithValue("@maKhachHang",maKhachHang);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+            }
         }
     }
 }

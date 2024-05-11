@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\DonHangController.cs" />
+    <Compile Include="Controller\KhachHangController.cs" />
+    <Compile Include="Controller\NguyenLieuController.cs" />
+    <Compile Include="Controller\NhanVienController.cs" />
+    <Compile Include="Controller\SanPhamContoller.cs" />
     <Compile Include="forms\Forgot_pass_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +95,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Service\DonHangService.cs" />
+    <Compile Include="Service\NguyenLieuService.cs" />
+    <Compile Include="Service\NhanVienSevice.cs" />
+    <Compile Include="Service\SanPhamService.cs" />
     <Compile Include="usercontrol\MainTheme.cs">
       <SubType>UserControl</SubType>
     </Compile>
