@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Models;
-using WindowsFormsApp1.Service;
+using quanly_nhamayMinhChau.Models;
+using quanly_nhamayMinhChau.Service;
 
 namespace quanly_nhamayMinhChau.Controller
 {

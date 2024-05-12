@@ -58,11 +58,11 @@
     <Compile Include="forms\Forgot_pass_form.Designer.cs">
       <DependentUpon>Forgot_pass_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\Form1.cs">
+    <Compile Include="forms\Printform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="forms\Printform.Designer.cs">
+      <DependentUpon>Printform.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\Loginform.cs">
       <SubType>Form</SubType>
@@ -150,8 +150,8 @@
     <EmbeddedResource Include="forms\Forgot_pass_form.resx">
       <DependentUpon>Forgot_pass_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="forms\Printform.resx">
+      <DependentUpon>Printform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Loginform.resx">
       <DependentUpon>Loginform.cs</DependentUpon>
