@@ -32,7 +32,7 @@ namespace quanly_nhamayMinhChau.Service
                     donHang.maKhachHang = (string)reader["maKhachHang"];
                     donHang.maSanPham = (string)reader["maSanPham"];
                     donHang.moTa = (string)reader["moTa"];
-                    donHang.trangThai = (string)reader["trangThai"];
+                    donHang.thanhTien = (int)reader["thanhTien"];
                     list.Add(donHang);
                     lastid = donHang.maDonHang;
                 }
@@ -44,14 +44,14 @@ namespace quanly_nhamayMinhChau.Service
         {
             using (conn = Connection.GetConnection()) 
             {
-                string query = "INSERT INTO DonHang VALUE(@maDonHang,@maKhachHang,@maSanPham,@moTa,@trangThai) ";
+                string query = "INSERT INTO DonHang VALUE(@maDonHang,@maKhachHang,@maSanPham,@moTa,@thanhTien) ";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@maKhachHang", donHang.maDonHang);
-                cmd.Parameters.AddWithValue("@tenKhachHang", donHang.maKhachHang);
-                cmd.Parameters.AddWithValue("@SDT", donHang.maSanPham);
-                cmd.Parameters.AddWithValue("@diaChi", donHang.moTa);
-                cmd.Parameters.AddWithValue("@ngaySinh", donHang.trangThai);
+                cmd.Parameters.AddWithValue("@maDonHang", donHang.maDonHang);
+                cmd.Parameters.AddWithValue("@maKhachHang", donHang.maKhachHang);
+                cmd.Parameters.AddWithValue("@maSanPham", donHang.maSanPham);
+                cmd.Parameters.AddWithValue("@moTa", donHang.moTa);
+                cmd.Parameters.AddWithValue("@thanhTien", donHang.thanhTien);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -66,11 +66,11 @@ namespace quanly_nhamayMinhChau.Service
                 string query = "UPDATE DonHang SET maKhachHang = @maKhachHang,maSanPham = @maSanPham,moTa = @moTa,trangThai = @trangThai WHERE maDonHang = @maDonHang";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@maKhachHang", donHang.maDonHang);
-                cmd.Parameters.AddWithValue("@tenKhachHang", donHang.maKhachHang);
-                cmd.Parameters.AddWithValue("@SDT", donHang.maSanPham);
-                cmd.Parameters.AddWithValue("@diaChi", donHang.moTa);
-                cmd.Parameters.AddWithValue("@ngaySinh", donHang.trangThai);
+                cmd.Parameters.AddWithValue("@maDonHang", donHang.maDonHang);
+                cmd.Parameters.AddWithValue("@maKhachHang", donHang.maKhachHang);
+                cmd.Parameters.AddWithValue("@maSanPham", donHang.maSanPham);
+                cmd.Parameters.AddWithValue("@moTa)", donHang.moTa);
+                cmd.Parameters.AddWithValue("@thanhTien", donHang.thanhTien);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();

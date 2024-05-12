@@ -97,7 +97,7 @@
     </Compile>
     <Compile Include="Service\DonHangService.cs" />
     <Compile Include="Service\NguyenLieuService.cs" />
-    <Compile Include="Service\NhanVienSevice.cs" />
+    <Compile Include="Service\NhanVienService.cs" />
     <Compile Include="Service\SanPhamService.cs" />
     <Compile Include="usercontrol\MainTheme.cs">
       <SubType>UserControl</SubType>

@@ -17,7 +17,7 @@ namespace quanly_nhamayMinhChau.Service
         {
             using(conn = Connection.GetConnection())
             {
-                string query = "SELECT * FROM NhanVien WHERE ";
+                string query = "SELECT * FROM NhanVien WHERE SDT = @SDT, password =@password ";
                 SqlCommand cmd = new SqlCommand(query,conn);
                 
                 conn.Open();
@@ -27,6 +27,8 @@ namespace quanly_nhamayMinhChau.Service
                 {
                     nv = new NhanVien();
                     //nhan vien
+
+
 
                     conn.Close();
                     return true;
@@ -40,7 +42,7 @@ namespace quanly_nhamayMinhChau.Service
         {
             
         }
-        public NhanVien SetNhanVien()
+        public NhanVien Detail()
         {
             return nv;
         }

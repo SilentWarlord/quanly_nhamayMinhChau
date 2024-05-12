@@ -16,25 +16,25 @@ namespace quanly_nhamayMinhChau.Controller
         {
             return service.GetAll();
         }
-        public void Add(string maDonHang, string maKhachHang, string maSanPham, string moTa, string trangThai)
+        public void Add(string maDonHang, string maKhachHang, string maSanPham, string moTa, int thanhTien)
         {
             DonHang donHang = new DonHang();
             donHang.maDonHang = maDonHang;
             donHang.maKhachHang = maKhachHang;
             donHang.maSanPham = maSanPham;
             donHang.moTa = moTa;
-            donHang.trangThai = trangThai;
+            donHang.thanhTien = thanhTien;
 
             service.Add(donHang);
         }
-        public void Update(string maDonHang, string maKhachHang, string maSanPham, string moTa, string trangThai)
+        public void Update(string maDonHang, string maKhachHang, string maSanPham, string moTa, int thanhTien)
         {
             DonHang donHang = new DonHang();
             donHang.maDonHang = maDonHang;
             donHang.maKhachHang = maKhachHang;
             donHang.maSanPham = maSanPham;
             donHang.moTa = moTa;
-            donHang.trangThai = trangThai;
+            donHang.thanhTien = thanhTien;
 
             service.Update(donHang);
         }

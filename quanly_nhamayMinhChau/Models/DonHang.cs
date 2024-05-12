@@ -12,6 +12,6 @@ namespace quanly_nhamayMinhChau.Models
         public string maKhachHang {  get; set; }
         public string maSanPham {  get; set; }
         public string moTa {  get; set; }
-        public string trangThai {  get; set; }
+        public int thanhTien {  get; set; }
     }
 }
