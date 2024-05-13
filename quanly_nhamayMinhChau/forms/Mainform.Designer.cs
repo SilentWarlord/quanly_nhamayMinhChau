@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
             this.Listchucnang_panel = new System.Windows.Forms.Panel();
             this.logo_panel = new System.Windows.Forms.Panel();
+            this.head2_label = new System.Windows.Forms.Label();
+            this.head1_label = new System.Windows.Forms.Label();
             this.ThongKe_button = new System.Windows.Forms.Button();
             this.QLVL_button = new System.Windows.Forms.Button();
             this.QLNV_button = new System.Windows.Forms.Button();
@@ -38,6 +40,7 @@
             this.HoaDon__button = new System.Windows.Forms.Button();
             this.SP__button = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
+            this.logout_button = new System.Windows.Forms.Button();
             this.maintheme_usercontrol = new quanly_nhamayMinhChau.usercontrol.MainTheme();
             this.thongke_usercontrol = new quanly_nhamayMinhChau.usercontrol.ThongKe();
             this.quanlynvl__usercontrol = new quanly_nhamayMinhChau.usercontrol.QuanLyNVL();
@@ -45,8 +48,6 @@
             this.qlkhachhang_usercontrol = new quanly_nhamayMinhChau.usercontrol.QLKhachHang();
             this.qlhoadon_usercontrol = new quanly_nhamayMinhChau.usercontrol.QLHoaDon();
             this.sp_usercontrol = new quanly_nhamayMinhChau.usercontrol.SP();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Listchucnang_panel.SuspendLayout();
             this.logo_panel.SuspendLayout();
             this.main_panel.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             this.Listchucnang_panel.BackColor = System.Drawing.Color.DarkSlateGray;
             this.Listchucnang_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Listchucnang_panel.Controls.Add(this.logout_button);
             this.Listchucnang_panel.Controls.Add(this.logo_panel);
             this.Listchucnang_panel.Controls.Add(this.ThongKe_button);
             this.Listchucnang_panel.Controls.Add(this.QLVL_button);
@@ -75,14 +77,34 @@
             this.logo_panel.BackColor = System.Drawing.Color.Honeydew;
             this.logo_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo_panel.BackgroundImage")));
             this.logo_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logo_panel.Controls.Add(this.label2);
-            this.logo_panel.Controls.Add(this.label1);
+            this.logo_panel.Controls.Add(this.head2_label);
+            this.logo_panel.Controls.Add(this.head1_label);
             this.logo_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logo_panel.Location = new System.Drawing.Point(0, 0);
             this.logo_panel.Name = "logo_panel";
             this.logo_panel.Size = new System.Drawing.Size(397, 105);
             this.logo_panel.TabIndex = 7;
             this.logo_panel.Click += new System.EventHandler(this.logo_panel_Click);
+            // 
+            // head2_label
+            // 
+            this.head2_label.AutoSize = true;
+            this.head2_label.Font = new System.Drawing.Font("Freestyle Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.head2_label.Location = new System.Drawing.Point(244, 22);
+            this.head2_label.Name = "head2_label";
+            this.head2_label.Size = new System.Drawing.Size(153, 51);
+            this.head2_label.TabIndex = 15;
+            this.head2_label.Text = "Minh Châu";
+            // 
+            // head1_label
+            // 
+            this.head1_label.AutoSize = true;
+            this.head1_label.Font = new System.Drawing.Font("Freestyle Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.head1_label.Location = new System.Drawing.Point(11, 22);
+            this.head1_label.Name = "head1_label";
+            this.head1_label.Size = new System.Drawing.Size(129, 51);
+            this.head1_label.TabIndex = 14;
+            this.head1_label.Text = "Nhà may";
             // 
             // ThongKe_button
             // 
@@ -92,7 +114,7 @@
             this.ThongKe_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThongKe_button.Image = ((System.Drawing.Image)(resources.GetObject("ThongKe_button.Image")));
             this.ThongKe_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ThongKe_button.Location = new System.Drawing.Point(0, 670);
+            this.ThongKe_button.Location = new System.Drawing.Point(-2, 585);
             this.ThongKe_button.Name = "ThongKe_button";
             this.ThongKe_button.Size = new System.Drawing.Size(399, 81);
             this.ThongKe_button.TabIndex = 6;
@@ -108,7 +130,7 @@
             this.QLVL_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLVL_button.Image = ((System.Drawing.Image)(resources.GetObject("QLVL_button.Image")));
             this.QLVL_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.QLVL_button.Location = new System.Drawing.Point(0, 583);
+            this.QLVL_button.Location = new System.Drawing.Point(-2, 498);
             this.QLVL_button.Name = "QLVL_button";
             this.QLVL_button.Size = new System.Drawing.Size(399, 81);
             this.QLVL_button.TabIndex = 5;
@@ -124,7 +146,7 @@
             this.QLNV_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLNV_button.Image = ((System.Drawing.Image)(resources.GetObject("QLNV_button.Image")));
             this.QLNV_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.QLNV_button.Location = new System.Drawing.Point(0, 496);
+            this.QLNV_button.Location = new System.Drawing.Point(-2, 411);
             this.QLNV_button.Name = "QLNV_button";
             this.QLNV_button.Size = new System.Drawing.Size(399, 81);
             this.QLNV_button.TabIndex = 4;
@@ -140,7 +162,7 @@
             this.QLKH__button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLKH__button.Image = ((System.Drawing.Image)(resources.GetObject("QLKH__button.Image")));
             this.QLKH__button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.QLKH__button.Location = new System.Drawing.Point(0, 409);
+            this.QLKH__button.Location = new System.Drawing.Point(-2, 324);
             this.QLKH__button.Name = "QLKH__button";
             this.QLKH__button.Size = new System.Drawing.Size(399, 81);
             this.QLKH__button.TabIndex = 3;
@@ -156,7 +178,7 @@
             this.HoaDon__button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoaDon__button.Image = ((System.Drawing.Image)(resources.GetObject("HoaDon__button.Image")));
             this.HoaDon__button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HoaDon__button.Location = new System.Drawing.Point(0, 322);
+            this.HoaDon__button.Location = new System.Drawing.Point(-2, 237);
             this.HoaDon__button.Name = "HoaDon__button";
             this.HoaDon__button.Size = new System.Drawing.Size(399, 81);
             this.HoaDon__button.TabIndex = 2;
@@ -172,7 +194,7 @@
             this.SP__button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SP__button.Image = ((System.Drawing.Image)(resources.GetObject("SP__button.Image")));
             this.SP__button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SP__button.Location = new System.Drawing.Point(0, 235);
+            this.SP__button.Location = new System.Drawing.Point(-2, 150);
             this.SP__button.Name = "SP__button";
             this.SP__button.Size = new System.Drawing.Size(399, 81);
             this.SP__button.TabIndex = 1;
@@ -196,6 +218,21 @@
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(1180, 875);
             this.main_panel.TabIndex = 1;
+            // 
+            // logout_button
+            // 
+            this.logout_button.BackColor = System.Drawing.Color.Honeydew;
+            this.logout_button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.logout_button.FlatAppearance.BorderSize = 0;
+            this.logout_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_button.Image = ((System.Drawing.Image)(resources.GetObject("logout_button.Image")));
+            this.logout_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logout_button.Location = new System.Drawing.Point(-2, 672);
+            this.logout_button.Name = "logout_button";
+            this.logout_button.Size = new System.Drawing.Size(399, 81);
+            this.logout_button.TabIndex = 8;
+            this.logout_button.Text = "Đăng xuất";
+            this.logout_button.UseVisualStyleBackColor = false;
             // 
             // maintheme_usercontrol
             // 
@@ -256,26 +293,6 @@
             this.sp_usercontrol.Size = new System.Drawing.Size(1180, 875);
             this.sp_usercontrol.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Freestyle Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 52);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Nhà may";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Freestyle Script", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(244, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 52);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Minh Châu";
-            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,7 +333,8 @@
         private usercontrol.QLNhanVien qlnhanvien_usercontrol;
         private usercontrol.ThongKe thongke_usercontrol;
         private usercontrol.MainTheme maintheme_usercontrol;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label head2_label;
+        private System.Windows.Forms.Label head1_label;
+        private System.Windows.Forms.Button logout_button;
     }
 }

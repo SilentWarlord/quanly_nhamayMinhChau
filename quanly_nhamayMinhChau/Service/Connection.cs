@@ -11,7 +11,7 @@ namespace quanly_nhamayMinhChau.Service
     {
         public static SqlConnection GetConnection()
         {
-            string connectionString = "Server=; Database=QLNMMC; Integrated Security = True; ";
+            string connectionString = "Server=CAUBEKINH8\\SQLEXPRESS; Database=QLNMMC; Integrated Security = True; ";
             return new SqlConnection();
         }
 
