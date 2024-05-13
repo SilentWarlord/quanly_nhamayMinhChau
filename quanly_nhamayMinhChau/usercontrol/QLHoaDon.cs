@@ -37,7 +37,12 @@ namespace quanly_nhamayMinhChau.usercontrol
         {
             hoadon_datagridview.CurrentCell.Selected = true;
             MaHDvalue_label.Text = hoadon_datagridview.Rows[e.RowIndex].Cells[0].Value.ToString();
-            TongTien_value.Text = hoadon_datagridview.Rows[e.RowIndex].Cells[4].Value.ToString();
+            TongCong_value.Text = hoadon_datagridview.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

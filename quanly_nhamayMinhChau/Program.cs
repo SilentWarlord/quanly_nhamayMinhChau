@@ -16,7 +16,7 @@ namespace quanly_nhamayMinhChau
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Startform());
-            Application.Run(new Mainform());
+            Application.Run(new Startform());
         }
     }
 }

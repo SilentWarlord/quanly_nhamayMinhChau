@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.Panel mota_panel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SP));
-            this.motaSP_usercontrol = new quanly_nhamayMinhChau.usercontrol.motaSP();
             this.head_panel = new System.Windows.Forms.Panel();
             this.SP_label = new System.Windows.Forms.Label();
             this.SP_picturebox = new System.Windows.Forms.PictureBox();
@@ -46,6 +45,7 @@
             this.sua_button = new System.Windows.Forms.Button();
             this.xoa_button = new System.Windows.Forms.Button();
             this.them_button = new System.Windows.Forms.Button();
+            this.motaSP_usercontrol = new quanly_nhamayMinhChau.usercontrol.motaSP();
             mota_panel = new System.Windows.Forms.Panel();
             mota_panel.SuspendLayout();
             this.head_panel.SuspendLayout();
@@ -68,14 +68,6 @@
             mota_panel.Name = "mota_panel";
             mota_panel.Size = new System.Drawing.Size(291, 775);
             mota_panel.TabIndex = 3;
-            // 
-            // motaSP_usercontrol
-            // 
-            this.motaSP_usercontrol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.motaSP_usercontrol.Location = new System.Drawing.Point(0, 0);
-            this.motaSP_usercontrol.Name = "motaSP_usercontrol";
-            this.motaSP_usercontrol.Size = new System.Drawing.Size(289, 773);
-            this.motaSP_usercontrol.TabIndex = 0;
             // 
             // head_panel
             // 
@@ -112,11 +104,11 @@
             // 
             this.sanpham_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sanpham_datagridview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sanpham_datagridview.Location = new System.Drawing.Point(0, 100);
+            this.sanpham_datagridview.Location = new System.Drawing.Point(0, 139);
             this.sanpham_datagridview.Name = "sanpham_datagridview";
             this.sanpham_datagridview.RowHeadersWidth = 51;
             this.sanpham_datagridview.RowTemplate.Height = 24;
-            this.sanpham_datagridview.Size = new System.Drawing.Size(889, 775);
+            this.sanpham_datagridview.Size = new System.Drawing.Size(889, 736);
             this.sanpham_datagridview.TabIndex = 5;
             // 
             // data_panel
@@ -238,14 +230,22 @@
             this.them_button.Text = "Thêm";
             this.them_button.UseVisualStyleBackColor = true;
             // 
+            // motaSP_usercontrol
+            // 
+            this.motaSP_usercontrol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.motaSP_usercontrol.Location = new System.Drawing.Point(0, 0);
+            this.motaSP_usercontrol.Name = "motaSP_usercontrol";
+            this.motaSP_usercontrol.Size = new System.Drawing.Size(289, 773);
+            this.motaSP_usercontrol.TabIndex = 0;
+            // 
             // SP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.Controls.Add(this.data_panel);
             this.Controls.Add(this.sanpham_datagridview);
+            this.Controls.Add(this.data_panel);
             this.Controls.Add(mota_panel);
             this.Controls.Add(this.head_panel);
             this.Name = "SP";

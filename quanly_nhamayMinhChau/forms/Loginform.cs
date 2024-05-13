@@ -38,7 +38,18 @@ namespace quanly_nhamayMinhChau
         private void button1_Click(object sender, EventArgs e)
         {
             //thuc hein cac buoc xac minh tai khoan..
-            controler.Login(username_textBox.Text,pass_textBox.Text);
+            if (controler.Login(username_textBox.Text, pass_textBox.Text))
+            {
+                Form mainForm = new Mainform();
+                
+                mainForm.Show();
+                for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+                {
+                    if (Application.OpenForms[i].Name != "Mainform")
+                        Application.OpenForms[i].Hide();
+                }
+
+            }
 
         }
 

@@ -26,6 +26,10 @@ namespace quanly_nhamayMinhChau.Service
 
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+
+                }
 
                 if (reader != null)
                 {

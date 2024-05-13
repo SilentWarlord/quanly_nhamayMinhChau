@@ -59,11 +59,11 @@
             // 
             this.nvl_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.nvl_datagridview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nvl_datagridview.Location = new System.Drawing.Point(0, 100);
+            this.nvl_datagridview.Location = new System.Drawing.Point(0, 159);
             this.nvl_datagridview.Name = "nvl_datagridview";
             this.nvl_datagridview.RowHeadersWidth = 51;
             this.nvl_datagridview.RowTemplate.Height = 24;
-            this.nvl_datagridview.Size = new System.Drawing.Size(1180, 775);
+            this.nvl_datagridview.Size = new System.Drawing.Size(1180, 716);
             this.nvl_datagridview.TabIndex = 13;
             // 
             // head_panel
@@ -220,8 +220,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chucnang_panel);
             this.Controls.Add(this.nvl_datagridview);
+            this.Controls.Add(this.chucnang_panel);
             this.Controls.Add(this.head_panel);
             this.Name = "QuanLyNVL";
             this.Size = new System.Drawing.Size(1180, 875);

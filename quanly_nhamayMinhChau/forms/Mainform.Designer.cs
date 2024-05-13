@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
             this.Listchucnang_panel = new System.Windows.Forms.Panel();
+            this.logout_button = new System.Windows.Forms.Button();
             this.logo_panel = new System.Windows.Forms.Panel();
             this.head2_label = new System.Windows.Forms.Label();
             this.head1_label = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.HoaDon__button = new System.Windows.Forms.Button();
             this.SP__button = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
-            this.logout_button = new System.Windows.Forms.Button();
             this.maintheme_usercontrol = new quanly_nhamayMinhChau.usercontrol.MainTheme();
             this.thongke_usercontrol = new quanly_nhamayMinhChau.usercontrol.ThongKe();
             this.quanlynvl__usercontrol = new quanly_nhamayMinhChau.usercontrol.QuanLyNVL();
@@ -71,6 +71,22 @@
             this.Listchucnang_panel.Name = "Listchucnang_panel";
             this.Listchucnang_panel.Size = new System.Drawing.Size(399, 875);
             this.Listchucnang_panel.TabIndex = 0;
+            // 
+            // logout_button
+            // 
+            this.logout_button.BackColor = System.Drawing.Color.Honeydew;
+            this.logout_button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.logout_button.FlatAppearance.BorderSize = 0;
+            this.logout_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_button.Image = ((System.Drawing.Image)(resources.GetObject("logout_button.Image")));
+            this.logout_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logout_button.Location = new System.Drawing.Point(-2, 672);
+            this.logout_button.Name = "logout_button";
+            this.logout_button.Size = new System.Drawing.Size(399, 81);
+            this.logout_button.TabIndex = 8;
+            this.logout_button.Text = "Đăng xuất";
+            this.logout_button.UseVisualStyleBackColor = false;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // logo_panel
             // 
@@ -111,7 +127,7 @@
             this.ThongKe_button.BackColor = System.Drawing.Color.Honeydew;
             this.ThongKe_button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.ThongKe_button.FlatAppearance.BorderSize = 0;
-            this.ThongKe_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThongKe_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThongKe_button.Image = ((System.Drawing.Image)(resources.GetObject("ThongKe_button.Image")));
             this.ThongKe_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ThongKe_button.Location = new System.Drawing.Point(-2, 585);
@@ -127,7 +143,7 @@
             this.QLVL_button.BackColor = System.Drawing.Color.Honeydew;
             this.QLVL_button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.QLVL_button.FlatAppearance.BorderSize = 0;
-            this.QLVL_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLVL_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLVL_button.Image = ((System.Drawing.Image)(resources.GetObject("QLVL_button.Image")));
             this.QLVL_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.QLVL_button.Location = new System.Drawing.Point(-2, 498);
@@ -143,7 +159,7 @@
             this.QLNV_button.BackColor = System.Drawing.Color.Honeydew;
             this.QLNV_button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.QLNV_button.FlatAppearance.BorderSize = 0;
-            this.QLNV_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLNV_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLNV_button.Image = ((System.Drawing.Image)(resources.GetObject("QLNV_button.Image")));
             this.QLNV_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.QLNV_button.Location = new System.Drawing.Point(-2, 411);
@@ -159,7 +175,7 @@
             this.QLKH__button.BackColor = System.Drawing.Color.Honeydew;
             this.QLKH__button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.QLKH__button.FlatAppearance.BorderSize = 0;
-            this.QLKH__button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QLKH__button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QLKH__button.Image = ((System.Drawing.Image)(resources.GetObject("QLKH__button.Image")));
             this.QLKH__button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.QLKH__button.Location = new System.Drawing.Point(-2, 324);
@@ -175,7 +191,7 @@
             this.HoaDon__button.BackColor = System.Drawing.Color.Honeydew;
             this.HoaDon__button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.HoaDon__button.FlatAppearance.BorderSize = 0;
-            this.HoaDon__button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoaDon__button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoaDon__button.Image = ((System.Drawing.Image)(resources.GetObject("HoaDon__button.Image")));
             this.HoaDon__button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HoaDon__button.Location = new System.Drawing.Point(-2, 237);
@@ -191,7 +207,7 @@
             this.SP__button.BackColor = System.Drawing.Color.Honeydew;
             this.SP__button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
             this.SP__button.FlatAppearance.BorderSize = 0;
-            this.SP__button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SP__button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SP__button.Image = ((System.Drawing.Image)(resources.GetObject("SP__button.Image")));
             this.SP__button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SP__button.Location = new System.Drawing.Point(-2, 150);
@@ -218,21 +234,6 @@
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(1180, 875);
             this.main_panel.TabIndex = 1;
-            // 
-            // logout_button
-            // 
-            this.logout_button.BackColor = System.Drawing.Color.Honeydew;
-            this.logout_button.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.logout_button.FlatAppearance.BorderSize = 0;
-            this.logout_button.Font = new System.Drawing.Font("Open Sans Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_button.Image = ((System.Drawing.Image)(resources.GetObject("logout_button.Image")));
-            this.logout_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logout_button.Location = new System.Drawing.Point(-2, 672);
-            this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(399, 81);
-            this.logout_button.TabIndex = 8;
-            this.logout_button.Text = "Đăng xuất";
-            this.logout_button.UseVisualStyleBackColor = false;
             // 
             // maintheme_usercontrol
             // 

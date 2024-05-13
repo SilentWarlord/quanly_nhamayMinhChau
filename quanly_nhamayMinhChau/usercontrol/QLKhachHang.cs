@@ -30,5 +30,10 @@ namespace quanly_nhamayMinhChau.usercontrol
         {
 
         }
+
+        private void chucnang_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

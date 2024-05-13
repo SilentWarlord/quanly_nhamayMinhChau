@@ -35,7 +35,6 @@
             this.chitietHD_panel = new System.Windows.Forms.Panel();
             this.print_buttton = new System.Windows.Forms.Button();
             this.TongCong_value = new System.Windows.Forms.Label();
-            this.TongTien_value = new System.Windows.Forms.Label();
             this.MaHDvalue_label = new System.Windows.Forms.Label();
             this.chitietHD_datagridview = new System.Windows.Forms.DataGridView();
             this.TongCong_label = new System.Windows.Forms.Label();
@@ -54,6 +53,9 @@
             this.xoa_button = new System.Windows.Forms.Button();
             this.add_icon = new System.Windows.Forms.PictureBox();
             this.them_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SDTKhachHang = new System.Windows.Forms.TextBox();
+            this.TongTien_value = new System.Windows.Forms.TextBox();
             this.head_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLHoaDon_picturebox)).BeginInit();
             this.chitietHD_panel.SuspendLayout();
@@ -101,12 +103,14 @@
             // chitietHD_panel
             // 
             this.chitietHD_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chitietHD_panel.Controls.Add(this.TongTien_value);
+            this.chitietHD_panel.Controls.Add(this.SDTKhachHang);
             this.chitietHD_panel.Controls.Add(this.print_buttton);
             this.chitietHD_panel.Controls.Add(this.TongCong_value);
-            this.chitietHD_panel.Controls.Add(this.TongTien_value);
             this.chitietHD_panel.Controls.Add(this.MaHDvalue_label);
             this.chitietHD_panel.Controls.Add(this.chitietHD_datagridview);
             this.chitietHD_panel.Controls.Add(this.TongCong_label);
+            this.chitietHD_panel.Controls.Add(this.label1);
             this.chitietHD_panel.Controls.Add(this.Tongtien_label);
             this.chitietHD_panel.Controls.Add(this.MaHD_label);
             this.chitietHD_panel.Controls.Add(this.CTHD_label);
@@ -131,21 +135,11 @@
             // 
             this.TongCong_value.AutoSize = true;
             this.TongCong_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongCong_value.Location = new System.Drawing.Point(5, 675);
+            this.TongCong_value.Location = new System.Drawing.Point(7, 447);
             this.TongCong_value.Name = "TongCong_value";
             this.TongCong_value.Size = new System.Drawing.Size(58, 20);
             this.TongCong_value.TabIndex = 7;
             this.TongCong_value.Text = "[None]";
-            // 
-            // TongTien_value
-            // 
-            this.TongTien_value.AutoSize = true;
-            this.TongTien_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongTien_value.Location = new System.Drawing.Point(5, 611);
-            this.TongTien_value.Name = "TongTien_value";
-            this.TongTien_value.Size = new System.Drawing.Size(58, 20);
-            this.TongTien_value.TabIndex = 6;
-            this.TongTien_value.Text = "[None]";
             // 
             // MaHDvalue_label
             // 
@@ -164,14 +158,14 @@
             this.chitietHD_datagridview.Name = "chitietHD_datagridview";
             this.chitietHD_datagridview.RowHeadersWidth = 51;
             this.chitietHD_datagridview.RowTemplate.Height = 24;
-            this.chitietHD_datagridview.Size = new System.Drawing.Size(435, 498);
+            this.chitietHD_datagridview.Size = new System.Drawing.Size(435, 201);
             this.chitietHD_datagridview.TabIndex = 4;
             // 
             // TongCong_label
             // 
             this.TongCong_label.AutoSize = true;
             this.TongCong_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongCong_label.Location = new System.Drawing.Point(3, 642);
+            this.TongCong_label.Location = new System.Drawing.Point(5, 414);
             this.TongCong_label.Name = "TongCong_label";
             this.TongCong_label.Size = new System.Drawing.Size(336, 22);
             this.TongCong_label.TabIndex = 3;
@@ -181,7 +175,7 @@
             // 
             this.Tongtien_label.AutoSize = true;
             this.Tongtien_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tongtien_label.Location = new System.Drawing.Point(3, 578);
+            this.Tongtien_label.Location = new System.Drawing.Point(5, 335);
             this.Tongtien_label.Name = "Tongtien_label";
             this.Tongtien_label.Size = new System.Drawing.Size(187, 22);
             this.Tongtien_label.TabIndex = 2;
@@ -338,6 +332,32 @@
             this.them_button.Text = "Thêm";
             this.them_button.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 267);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 22);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Số Điện Thoại";
+            // 
+            // SDTKhachHang
+            // 
+            this.SDTKhachHang.Location = new System.Drawing.Point(6, 293);
+            this.SDTKhachHang.Name = "SDTKhachHang";
+            this.SDTKhachHang.Size = new System.Drawing.Size(424, 22);
+            this.SDTKhachHang.TabIndex = 9;
+            this.SDTKhachHang.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // TongTien_value
+            // 
+            this.TongTien_value.Location = new System.Drawing.Point(6, 369);
+            this.TongTien_value.Name = "TongTien_value";
+            this.TongTien_value.Size = new System.Drawing.Size(424, 22);
+            this.TongTien_value.TabIndex = 9;
+            this.TongTien_value.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // QLHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -384,7 +404,6 @@
         private System.Windows.Forms.Label MaHDvalue_label;
         private System.Windows.Forms.DataGridView chitietHD_datagridview;
         private System.Windows.Forms.Label TongCong_value;
-        private System.Windows.Forms.Label TongTien_value;
         private System.Windows.Forms.Button luu_button;
         private System.Windows.Forms.PictureBox save_icon;
         private System.Windows.Forms.PictureBox cancel_icon;
@@ -392,5 +411,8 @@
         private System.Windows.Forms.PictureBox delete_icon;
         private System.Windows.Forms.PictureBox add_icon;
         private System.Windows.Forms.Button print_buttton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox SDTKhachHang;
+        private System.Windows.Forms.TextBox TongTien_value;
     }
 }

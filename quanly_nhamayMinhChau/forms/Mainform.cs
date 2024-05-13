@@ -58,5 +58,12 @@ namespace quanly_nhamayMinhChau
         {
             thongke_usercontrol.BringToFront();
         }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            Form startForm = new Startform();
+            startForm.Show();
+            this.Close();
+        }
     }
 }
