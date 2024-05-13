@@ -29,11 +29,11 @@ namespace quanly_nhamayMinhChau.Service
                 while (reader.Read())
                 {
                     KhachHang kh = new KhachHang();
-                    kh.maKhachHang = (string)reader["id"];
-                    kh.tenKhachHang = (string)reader["ho_ten"];
-                    kh.SDT = (string)reader["dia_chi"];
-                    kh.diaChi = (string)reader["email"];
-                    kh.ngaySinh = (DateTime)reader["so_dien_thoai"];
+                    kh.maKhachHang = (string)reader["maKhachHang"];
+                    kh.tenKhachHang = (string)reader["tenKhachHang"];
+                    kh.SDT = (string)reader["SDT"];
+                    kh.diaChi = (string)reader["diaChi"];
+                    kh.ngaySinh = (DateTime)reader["ngaySinh"];
                     list.Add(kh);
                     lastid = kh.maKhachHang;
                 }

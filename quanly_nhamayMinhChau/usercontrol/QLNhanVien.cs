@@ -1,4 +1,5 @@
-﻿using System;
+﻿using quanly_nhamayMinhChau.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,27 @@ namespace quanly_nhamayMinhChau.usercontrol
 {
     public partial class QLNhanVien : UserControl
     {
+        NhanVienController controller = new NhanVienController();
         public QLNhanVien()
         {
             InitializeComponent();
+        }
+
+        protected override void OnLoad( EventArgs e)
+        {
+            nhanvien_datagridview.DataSource = controller.GetAll();
+
+            base.OnLoad(e);
+        }
+
+        private void Nhanvien_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void them_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,12 +10,15 @@ namespace quanly_nhamayMinhChau.Controller
 {
     internal class LoginControler
     {
-        LoginService service;
+        LoginService service = new LoginService();
         NhanVien nv;
         
-        public void Login(string phone, string password)
+        public void Login(string SDT, string password)
         {
-
+            if(service.Login(SDT, password))
+            {
+                Console.WriteLine("siuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
+            }
         }
     }
 }

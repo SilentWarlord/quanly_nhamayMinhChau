@@ -65,6 +65,7 @@
             this.nhanvien_datagridview.RowTemplate.Height = 24;
             this.nhanvien_datagridview.Size = new System.Drawing.Size(1180, 775);
             this.nhanvien_datagridview.TabIndex = 10;
+            this.nhanvien_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Nhanvien_datagridview_CellContentClick);
             // 
             // head_panel
             // 
@@ -215,6 +216,7 @@
             this.them_button.TabIndex = 5;
             this.them_button.Text = "Thêm";
             this.them_button.UseVisualStyleBackColor = true;
+            this.them_button.Click += new System.EventHandler(this.them_button_Click);
             // 
             // QLNhanVien
             // 

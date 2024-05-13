@@ -36,27 +36,27 @@
             this.SP_picturebox = new System.Windows.Forms.PictureBox();
             this.sanpham_datagridview = new System.Windows.Forms.DataGridView();
             this.data_panel = new System.Windows.Forms.Panel();
+            this.save_icon = new System.Windows.Forms.PictureBox();
+            this.cancel_icon = new System.Windows.Forms.PictureBox();
+            this.modify_icon = new System.Windows.Forms.PictureBox();
+            this.delete_icon = new System.Windows.Forms.PictureBox();
             this.huy_button = new System.Windows.Forms.Button();
+            this.add_icon = new System.Windows.Forms.PictureBox();
+            this.luu_button = new System.Windows.Forms.Button();
             this.sua_button = new System.Windows.Forms.Button();
             this.xoa_button = new System.Windows.Forms.Button();
             this.them_button = new System.Windows.Forms.Button();
-            this.luu_button = new System.Windows.Forms.Button();
-            this.add_icon = new System.Windows.Forms.PictureBox();
-            this.delete_icon = new System.Windows.Forms.PictureBox();
-            this.modify_icon = new System.Windows.Forms.PictureBox();
-            this.cancel_icon = new System.Windows.Forms.PictureBox();
-            this.save_icon = new System.Windows.Forms.PictureBox();
             mota_panel = new System.Windows.Forms.Panel();
             mota_panel.SuspendLayout();
             this.head_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SP_picturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanpham_datagridview)).BeginInit();
             this.data_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.add_icon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delete_icon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modify_icon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cancel_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cancel_icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modify_icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delete_icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add_icon)).BeginInit();
             this.SuspendLayout();
             // 
             // mota_panel
@@ -138,6 +138,46 @@
             this.data_panel.Size = new System.Drawing.Size(889, 39);
             this.data_panel.TabIndex = 6;
             // 
+            // save_icon
+            // 
+            this.save_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_icon.BackgroundImage")));
+            this.save_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.save_icon.Location = new System.Drawing.Point(500, 5);
+            this.save_icon.Name = "save_icon";
+            this.save_icon.Size = new System.Drawing.Size(33, 31);
+            this.save_icon.TabIndex = 11;
+            this.save_icon.TabStop = false;
+            // 
+            // cancel_icon
+            // 
+            this.cancel_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel_icon.BackgroundImage")));
+            this.cancel_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cancel_icon.Location = new System.Drawing.Point(658, 3);
+            this.cancel_icon.Name = "cancel_icon";
+            this.cancel_icon.Size = new System.Drawing.Size(33, 31);
+            this.cancel_icon.TabIndex = 10;
+            this.cancel_icon.TabStop = false;
+            // 
+            // modify_icon
+            // 
+            this.modify_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("modify_icon.BackgroundImage")));
+            this.modify_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.modify_icon.Location = new System.Drawing.Point(351, 3);
+            this.modify_icon.Name = "modify_icon";
+            this.modify_icon.Size = new System.Drawing.Size(33, 31);
+            this.modify_icon.TabIndex = 9;
+            this.modify_icon.TabStop = false;
+            // 
+            // delete_icon
+            // 
+            this.delete_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("delete_icon.BackgroundImage")));
+            this.delete_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete_icon.Location = new System.Drawing.Point(191, 3);
+            this.delete_icon.Name = "delete_icon";
+            this.delete_icon.Size = new System.Drawing.Size(33, 31);
+            this.delete_icon.TabIndex = 8;
+            this.delete_icon.TabStop = false;
+            // 
             // huy_button
             // 
             this.huy_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,6 +187,26 @@
             this.huy_button.TabIndex = 4;
             this.huy_button.Text = "Hủy";
             this.huy_button.UseVisualStyleBackColor = true;
+            // 
+            // add_icon
+            // 
+            this.add_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_icon.BackgroundImage")));
+            this.add_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.add_icon.Location = new System.Drawing.Point(31, 3);
+            this.add_icon.Name = "add_icon";
+            this.add_icon.Size = new System.Drawing.Size(33, 31);
+            this.add_icon.TabIndex = 7;
+            this.add_icon.TabStop = false;
+            // 
+            // luu_button
+            // 
+            this.luu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.luu_button.Location = new System.Drawing.Point(500, 3);
+            this.luu_button.Name = "luu_button";
+            this.luu_button.Size = new System.Drawing.Size(142, 31);
+            this.luu_button.TabIndex = 5;
+            this.luu_button.Text = "Lưu";
+            this.luu_button.UseVisualStyleBackColor = true;
             // 
             // sua_button
             // 
@@ -178,66 +238,6 @@
             this.them_button.Text = "Thêm";
             this.them_button.UseVisualStyleBackColor = true;
             // 
-            // luu_button
-            // 
-            this.luu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.luu_button.Location = new System.Drawing.Point(500, 3);
-            this.luu_button.Name = "luu_button";
-            this.luu_button.Size = new System.Drawing.Size(142, 31);
-            this.luu_button.TabIndex = 5;
-            this.luu_button.Text = "Lưu";
-            this.luu_button.UseVisualStyleBackColor = true;
-            // 
-            // add_icon
-            // 
-            this.add_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add_icon.BackgroundImage")));
-            this.add_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.add_icon.Location = new System.Drawing.Point(31, 3);
-            this.add_icon.Name = "add_icon";
-            this.add_icon.Size = new System.Drawing.Size(33, 31);
-            this.add_icon.TabIndex = 7;
-            this.add_icon.TabStop = false;
-            // 
-            // delete_icon
-            // 
-            this.delete_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("delete_icon.BackgroundImage")));
-            this.delete_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.delete_icon.Location = new System.Drawing.Point(191, 3);
-            this.delete_icon.Name = "delete_icon";
-            this.delete_icon.Size = new System.Drawing.Size(33, 31);
-            this.delete_icon.TabIndex = 8;
-            this.delete_icon.TabStop = false;
-            // 
-            // modify_icon
-            // 
-            this.modify_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("modify_icon.BackgroundImage")));
-            this.modify_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.modify_icon.Location = new System.Drawing.Point(351, 3);
-            this.modify_icon.Name = "modify_icon";
-            this.modify_icon.Size = new System.Drawing.Size(33, 31);
-            this.modify_icon.TabIndex = 9;
-            this.modify_icon.TabStop = false;
-            // 
-            // cancel_icon
-            // 
-            this.cancel_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel_icon.BackgroundImage")));
-            this.cancel_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cancel_icon.Location = new System.Drawing.Point(658, 3);
-            this.cancel_icon.Name = "cancel_icon";
-            this.cancel_icon.Size = new System.Drawing.Size(33, 31);
-            this.cancel_icon.TabIndex = 10;
-            this.cancel_icon.TabStop = false;
-            // 
-            // save_icon
-            // 
-            this.save_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_icon.BackgroundImage")));
-            this.save_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.save_icon.Location = new System.Drawing.Point(500, 5);
-            this.save_icon.Name = "save_icon";
-            this.save_icon.Size = new System.Drawing.Size(33, 31);
-            this.save_icon.TabIndex = 11;
-            this.save_icon.TabStop = false;
-            // 
             // SP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,11 +256,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.SP_picturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanpham_datagridview)).EndInit();
             this.data_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.add_icon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.delete_icon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modify_icon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cancel_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cancel_icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modify_icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.delete_icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add_icon)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using quanly_nhamayMinhChau.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,22 @@ namespace quanly_nhamayMinhChau.usercontrol
 {
     public partial class QLKhachHang : UserControl
     {
+        KhachHangController controller = new KhachHangController();
         public QLKhachHang()
         {
             InitializeComponent();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            khachhang_datagridview.DataSource = controller.GetAll();
+
+            base.OnLoad(e);
+        }
+
+        private void khachhang_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

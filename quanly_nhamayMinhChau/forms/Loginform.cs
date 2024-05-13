@@ -1,4 +1,5 @@
-﻿using System;
+﻿using quanly_nhamayMinhChau.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace quanly_nhamayMinhChau
 {
     public partial class Loginform : Form
     {
+        LoginControler controler = new LoginControler();
         public Loginform()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace quanly_nhamayMinhChau
         private void button1_Click(object sender, EventArgs e)
         {
             //thuc hein cac buoc xac minh tai khoan..
-            
+            controler.Login(username_textBox.Text,pass_textBox.Text);
 
         }
 

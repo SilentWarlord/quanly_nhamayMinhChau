@@ -1,4 +1,5 @@
-﻿using System;
+﻿using quanly_nhamayMinhChau.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,18 @@ namespace quanly_nhamayMinhChau.usercontrol
 {
     public partial class SP : UserControl
     {
+        SanPhamController controller = new SanPhamController();
         public SP()
         {
             InitializeComponent();
 
 
+        }
+        protected override void OnLoad(EventArgs e)
+        {
+            sanpham_datagridview.DataSource = controller.GetAll();
+
+            base.OnLoad(e);
         }
     }
 }

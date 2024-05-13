@@ -31,6 +31,7 @@ namespace quanly_nhamayMinhChau.Service
                     NguyenLieu nguyenLieu = new NguyenLieu();
                     nguyenLieu.maNL = (string)reader["maNL"];
                     nguyenLieu.tenNL = (string)reader["tenNL"];
+                    nguyenLieu.soLuong = (int)reader["soLuong"];
                     nguyenLieu.DVD = (string)reader["DVD"];
                     nguyenLieu.giaThanh = (int)reader["giaThanh"];
                     nguyenLieu.ngayNhap = (DateTime)reader["ngayNhap"];
@@ -46,11 +47,12 @@ namespace quanly_nhamayMinhChau.Service
         {
             using (conn = Connection.GetConnection()) 
             {
-                string query = "INSERT INTO NguyenLieu VALUE(@maNL,@tenNL,@DVD,@giaThanh,@ngayNhap)";
+                string query = "INSERT INTO NguyenLieu VALUE(@maNL,@tenNL,@soLuong,@DVD,@giaThanh,@ngayNhap)";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@maNL", nguyenLieu.maNL);
                 cmd.Parameters.AddWithValue("@tenNL", nguyenLieu.tenNL);
+                cmd.Parameters.AddWithValue("@soLuong", nguyenLieu.soLuong);
                 cmd.Parameters.AddWithValue("@DVD", nguyenLieu.DVD);
                 cmd.Parameters.AddWithValue("@giaThanh", nguyenLieu.giaThanh);
                 cmd.Parameters.AddWithValue("@ngayNhap", nguyenLieu.ngayNhap);
@@ -65,11 +67,12 @@ namespace quanly_nhamayMinhChau.Service
         {
             using (conn = Connection.GetConnection()) 
             {
-                string query = "UPDATE NguyenLieu SET tenNL = @tenNL,DVD = @DVD,giaThanh = @giaThanh,ngayNhap = @ngayNhap WHERE maNL = @maNL";
+                string query = "UPDATE NguyenLieu SET tenNL = @tenNL,soLuong = @soLuong,DVD = @DVD,giaThanh = @giaThanh,ngayNhap = @ngayNhap WHERE maNL = @maNL";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@maNL", nguyenLieu.maNL);
                 cmd.Parameters.AddWithValue("@tenNL", nguyenLieu.tenNL);
+                cmd.Parameters.AddWithValue("@soLuong", nguyenLieu.soLuong);
                 cmd.Parameters.AddWithValue("@DVD", nguyenLieu.DVD);
                 cmd.Parameters.AddWithValue("@giaThanh", nguyenLieu.giaThanh);
                 cmd.Parameters.AddWithValue("@ngayNhap", nguyenLieu.ngayNhap);

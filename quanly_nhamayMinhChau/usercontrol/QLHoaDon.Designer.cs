@@ -33,6 +33,7 @@
             this.QLHoaDon_label = new System.Windows.Forms.Label();
             this.QLHoaDon_picturebox = new System.Windows.Forms.PictureBox();
             this.chitietHD_panel = new System.Windows.Forms.Panel();
+            this.print_buttton = new System.Windows.Forms.Button();
             this.TongCong_value = new System.Windows.Forms.Label();
             this.TongTien_value = new System.Windows.Forms.Label();
             this.MaHDvalue_label = new System.Windows.Forms.Label();
@@ -43,17 +44,16 @@
             this.CTHD_label = new System.Windows.Forms.Label();
             this.hoadon_datagridview = new System.Windows.Forms.DataGridView();
             this.chucnang_panel = new System.Windows.Forms.Panel();
-            this.huy_button = new System.Windows.Forms.Button();
-            this.sua_button = new System.Windows.Forms.Button();
-            this.xoa_button = new System.Windows.Forms.Button();
-            this.them_button = new System.Windows.Forms.Button();
-            this.luu_button = new System.Windows.Forms.Button();
             this.save_icon = new System.Windows.Forms.PictureBox();
+            this.luu_button = new System.Windows.Forms.Button();
             this.cancel_icon = new System.Windows.Forms.PictureBox();
+            this.huy_button = new System.Windows.Forms.Button();
             this.modify_icon = new System.Windows.Forms.PictureBox();
+            this.sua_button = new System.Windows.Forms.Button();
             this.delete_icon = new System.Windows.Forms.PictureBox();
+            this.xoa_button = new System.Windows.Forms.Button();
             this.add_icon = new System.Windows.Forms.PictureBox();
-            this.print_buttton = new System.Windows.Forms.Button();
+            this.them_button = new System.Windows.Forms.Button();
             this.head_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLHoaDon_picturebox)).BeginInit();
             this.chitietHD_panel.SuspendLayout();
@@ -115,6 +115,17 @@
             this.chitietHD_panel.Name = "chitietHD_panel";
             this.chitietHD_panel.Size = new System.Drawing.Size(435, 775);
             this.chitietHD_panel.TabIndex = 1;
+            // 
+            // print_buttton
+            // 
+            this.print_buttton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.print_buttton.Location = new System.Drawing.Point(228, 701);
+            this.print_buttton.Name = "print_buttton";
+            this.print_buttton.Size = new System.Drawing.Size(158, 36);
+            this.print_buttton.TabIndex = 8;
+            this.print_buttton.Text = "In hóa đơn";
+            this.print_buttton.UseVisualStyleBackColor = true;
+            this.print_buttton.Click += new System.EventHandler(this.print_buttton_Click);
             // 
             // TongCong_value
             // 
@@ -200,12 +211,13 @@
             // 
             this.hoadon_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hoadon_datagridview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hoadon_datagridview.Location = new System.Drawing.Point(0, 100);
+            this.hoadon_datagridview.Location = new System.Drawing.Point(0, 165);
             this.hoadon_datagridview.Name = "hoadon_datagridview";
             this.hoadon_datagridview.RowHeadersWidth = 51;
             this.hoadon_datagridview.RowTemplate.Height = 24;
-            this.hoadon_datagridview.Size = new System.Drawing.Size(745, 775);
+            this.hoadon_datagridview.Size = new System.Drawing.Size(745, 710);
             this.hoadon_datagridview.TabIndex = 2;
+            this.hoadon_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.hoadon_datagridview_CellContentClick_1);
             // 
             // chucnang_panel
             // 
@@ -226,45 +238,15 @@
             this.chucnang_panel.Size = new System.Drawing.Size(745, 65);
             this.chucnang_panel.TabIndex = 3;
             // 
-            // huy_button
+            // save_icon
             // 
-            this.huy_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.huy_button.Location = new System.Drawing.Point(536, 3);
-            this.huy_button.Name = "huy_button";
-            this.huy_button.Size = new System.Drawing.Size(128, 53);
-            this.huy_button.TabIndex = 8;
-            this.huy_button.Text = "Hủy";
-            this.huy_button.UseVisualStyleBackColor = true;
-            // 
-            // sua_button
-            // 
-            this.sua_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sua_button.Location = new System.Drawing.Point(276, 3);
-            this.sua_button.Name = "sua_button";
-            this.sua_button.Size = new System.Drawing.Size(128, 53);
-            this.sua_button.TabIndex = 7;
-            this.sua_button.Text = "Sửa";
-            this.sua_button.UseVisualStyleBackColor = true;
-            // 
-            // xoa_button
-            // 
-            this.xoa_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xoa_button.Location = new System.Drawing.Point(147, 3);
-            this.xoa_button.Name = "xoa_button";
-            this.xoa_button.Size = new System.Drawing.Size(128, 53);
-            this.xoa_button.TabIndex = 6;
-            this.xoa_button.Text = "Xóa";
-            this.xoa_button.UseVisualStyleBackColor = true;
-            // 
-            // them_button
-            // 
-            this.them_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.them_button.Location = new System.Drawing.Point(18, 3);
-            this.them_button.Name = "them_button";
-            this.them_button.Size = new System.Drawing.Size(128, 53);
-            this.them_button.TabIndex = 5;
-            this.them_button.Text = "Thêm";
-            this.them_button.UseVisualStyleBackColor = true;
+            this.save_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_icon.BackgroundImage")));
+            this.save_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.save_icon.Location = new System.Drawing.Point(415, 16);
+            this.save_icon.Name = "save_icon";
+            this.save_icon.Size = new System.Drawing.Size(28, 22);
+            this.save_icon.TabIndex = 16;
+            this.save_icon.TabStop = false;
             // 
             // luu_button
             // 
@@ -276,16 +258,6 @@
             this.luu_button.Text = "Lưu";
             this.luu_button.UseVisualStyleBackColor = true;
             // 
-            // save_icon
-            // 
-            this.save_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("save_icon.BackgroundImage")));
-            this.save_icon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.save_icon.Location = new System.Drawing.Point(415, 16);
-            this.save_icon.Name = "save_icon";
-            this.save_icon.Size = new System.Drawing.Size(28, 22);
-            this.save_icon.TabIndex = 16;
-            this.save_icon.TabStop = false;
-            // 
             // cancel_icon
             // 
             this.cancel_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel_icon.BackgroundImage")));
@@ -295,6 +267,16 @@
             this.cancel_icon.Size = new System.Drawing.Size(28, 22);
             this.cancel_icon.TabIndex = 15;
             this.cancel_icon.TabStop = false;
+            // 
+            // huy_button
+            // 
+            this.huy_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.huy_button.Location = new System.Drawing.Point(536, 3);
+            this.huy_button.Name = "huy_button";
+            this.huy_button.Size = new System.Drawing.Size(128, 53);
+            this.huy_button.TabIndex = 8;
+            this.huy_button.Text = "Hủy";
+            this.huy_button.UseVisualStyleBackColor = true;
             // 
             // modify_icon
             // 
@@ -306,6 +288,16 @@
             this.modify_icon.TabIndex = 14;
             this.modify_icon.TabStop = false;
             // 
+            // sua_button
+            // 
+            this.sua_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sua_button.Location = new System.Drawing.Point(276, 3);
+            this.sua_button.Name = "sua_button";
+            this.sua_button.Size = new System.Drawing.Size(128, 53);
+            this.sua_button.TabIndex = 7;
+            this.sua_button.Text = "Sửa";
+            this.sua_button.UseVisualStyleBackColor = true;
+            // 
             // delete_icon
             // 
             this.delete_icon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("delete_icon.BackgroundImage")));
@@ -315,6 +307,16 @@
             this.delete_icon.Size = new System.Drawing.Size(28, 22);
             this.delete_icon.TabIndex = 13;
             this.delete_icon.TabStop = false;
+            // 
+            // xoa_button
+            // 
+            this.xoa_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xoa_button.Location = new System.Drawing.Point(147, 3);
+            this.xoa_button.Name = "xoa_button";
+            this.xoa_button.Size = new System.Drawing.Size(128, 53);
+            this.xoa_button.TabIndex = 6;
+            this.xoa_button.Text = "Xóa";
+            this.xoa_button.UseVisualStyleBackColor = true;
             // 
             // add_icon
             // 
@@ -326,23 +328,22 @@
             this.add_icon.TabIndex = 12;
             this.add_icon.TabStop = false;
             // 
-            // print_buttton
+            // them_button
             // 
-            this.print_buttton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.print_buttton.Location = new System.Drawing.Point(228, 701);
-            this.print_buttton.Name = "print_buttton";
-            this.print_buttton.Size = new System.Drawing.Size(158, 36);
-            this.print_buttton.TabIndex = 8;
-            this.print_buttton.Text = "In hóa đơn";
-            this.print_buttton.UseVisualStyleBackColor = true;
-            this.print_buttton.Click += new System.EventHandler(this.print_buttton_Click);
+            this.them_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.them_button.Location = new System.Drawing.Point(18, 3);
+            this.them_button.Name = "them_button";
+            this.them_button.Size = new System.Drawing.Size(128, 53);
+            this.them_button.TabIndex = 5;
+            this.them_button.Text = "Thêm";
+            this.them_button.UseVisualStyleBackColor = true;
             // 
             // QLHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chucnang_panel);
             this.Controls.Add(this.hoadon_datagridview);
+            this.Controls.Add(this.chucnang_panel);
             this.Controls.Add(this.chitietHD_panel);
             this.Controls.Add(this.head_panel);
             this.Name = "QLHoaDon";

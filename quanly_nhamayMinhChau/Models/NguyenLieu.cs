@@ -10,6 +10,7 @@ namespace quanly_nhamayMinhChau.Models
     {
         public string maNL {  get; set; }
         public string tenNL { get; set; }
+        public int soLuong {  get; set; }
         public string DVD { get; set; }
         public int giaThanh {  get; set; }
         public DateTime ngayNhap { get; set; }
