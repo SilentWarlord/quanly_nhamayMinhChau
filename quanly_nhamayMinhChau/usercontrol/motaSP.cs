@@ -16,5 +16,10 @@ namespace quanly_nhamayMinhChau.usercontrol
         {
             InitializeComponent();
         }
+
+        private void motaSP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

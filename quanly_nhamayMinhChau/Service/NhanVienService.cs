@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using quanly_nhamayMinhChau.Service;
 using quanly_nhamayMinhChau.Models;
 using System.Net.NetworkInformation;
+using quanly_nhamayMinhChau.usercontrol;
 
 namespace quanly_nhamayMinhChau.Service
 {
@@ -29,6 +30,7 @@ namespace quanly_nhamayMinhChau.Service
                 conn.Open();
 
                 SqlDataReader reader = cmd.ExecuteReader();
+                
                 while (reader.Read())
                 {
                     NhanVien nhanVien = new NhanVien();
@@ -55,7 +57,7 @@ namespace quanly_nhamayMinhChau.Service
         {
             using (conn = Connection.GetConnection()) 
             {
-                string query = "INSERT INTO NhanVien VALUE(@maNhanVien,@tenNhanVien,@chucVu,@SDT,@email,@password,@queQuan,@ngaySinh,@ngayLam,@luong) ";
+                string query = "INSERT INTO NhanVien VALUES(@maNhanVien,@tenNhanVien,@chucVu,@SDT,@email,@password,@queQuan,@ngaySinh,@ngayLam,@luong) ";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@maNhanVien", nhanvien.maNhanVien);
@@ -114,11 +116,45 @@ namespace quanly_nhamayMinhChau.Service
                 conn.Close();
             }
         }
-        public void Search()
+        public List<NhanVien> Search(string type,string key)
         {
             using (conn = Connection.GetConnection()) 
             {
-            
+                list = new List<NhanVien>();
+                try{
+                    using (conn = Connection.GetConnection())
+                    {
+                        string query = "SELECT * FROM NhanVien WHERE " + type + " LIKE '%"+ key+"%'";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+
+                        
+                        conn.Open();
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            NhanVien nhanVien = new NhanVien();
+                            nhanVien.maNhanVien = (string)reader["maNhanVien"];
+                            nhanVien.tenNhanVien = (string)reader["tenNhanVien"];
+                            nhanVien.chucVu = (string)reader["chucVu"];
+                            nhanVien.SDT = (string)reader["SDT"];
+                            nhanVien.email = (string)reader["email"];
+                            nhanVien.password = (string)reader["password"];
+                            nhanVien.queQuan = (string)reader["queQuan"];
+                            nhanVien.ngaySinh = (DateTime)reader["ngaySinh"];
+                            nhanVien.ngayLam = (DateTime)reader["NgayLam"];
+                            nhanVien.luong = (int)reader["luong"];
+                            list.Add(nhanVien);
+                            lastid = nhanVien.maNhanVien;
+                        }
+                    }
+                    conn.Close();
+                    return list;
+                }
+                catch
+                {
+                    return list;
+                }
             }
         }
 
@@ -147,6 +183,9 @@ namespace quanly_nhamayMinhChau.Service
                 smtp.Send(message);
             }
         }
-
+        public string GetID()
+        {
+            return lastid;
+        }
     }
 }

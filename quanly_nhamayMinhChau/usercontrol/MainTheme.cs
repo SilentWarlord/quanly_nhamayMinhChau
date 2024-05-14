@@ -16,5 +16,10 @@ namespace quanly_nhamayMinhChau.usercontrol
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

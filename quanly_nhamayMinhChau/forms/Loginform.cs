@@ -50,6 +50,10 @@ namespace quanly_nhamayMinhChau
                 }
 
             }
+            else
+            {
+                
+            }
 
         }
 

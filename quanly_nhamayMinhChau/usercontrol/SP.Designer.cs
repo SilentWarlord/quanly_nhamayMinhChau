@@ -110,6 +110,7 @@
             this.sanpham_datagridview.RowTemplate.Height = 24;
             this.sanpham_datagridview.Size = new System.Drawing.Size(889, 736);
             this.sanpham_datagridview.TabIndex = 5;
+            this.sanpham_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sanpham_datagridview_CellContentClick);
             // 
             // data_panel
             // 
@@ -237,6 +238,7 @@
             this.motaSP_usercontrol.Name = "motaSP_usercontrol";
             this.motaSP_usercontrol.Size = new System.Drawing.Size(289, 773);
             this.motaSP_usercontrol.TabIndex = 0;
+            this.motaSP_usercontrol.Load += new System.EventHandler(this.motaSP_usercontrol_Load);
             // 
             // SP
             // 

@@ -33,6 +33,7 @@
             this.QLHoaDon_label = new System.Windows.Forms.Label();
             this.QLHoaDon_picturebox = new System.Windows.Forms.PictureBox();
             this.chitietHD_panel = new System.Windows.Forms.Panel();
+            this.TongTien_value = new System.Windows.Forms.TextBox();
             this.print_buttton = new System.Windows.Forms.Button();
             this.TongCong_value = new System.Windows.Forms.Label();
             this.MaHDvalue_label = new System.Windows.Forms.Label();
@@ -54,8 +55,11 @@
             this.add_icon = new System.Windows.Forms.PictureBox();
             this.them_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.SDTKhachHang = new System.Windows.Forms.TextBox();
-            this.TongTien_value = new System.Windows.Forms.TextBox();
+            this.maKhachHang = new System.Windows.Forms.TextBox();
+            this.maSanPham = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.mota_groupbox = new System.Windows.Forms.GroupBox();
+            this.mota_textbox = new System.Windows.Forms.TextBox();
             this.head_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLHoaDon_picturebox)).BeginInit();
             this.chitietHD_panel.SuspendLayout();
@@ -67,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.modify_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add_icon)).BeginInit();
+            this.mota_groupbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // head_panel
@@ -103,8 +108,11 @@
             // chitietHD_panel
             // 
             this.chitietHD_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chitietHD_panel.Controls.Add(this.mota_groupbox);
+            this.chitietHD_panel.Controls.Add(this.maSanPham);
+            this.chitietHD_panel.Controls.Add(this.label2);
             this.chitietHD_panel.Controls.Add(this.TongTien_value);
-            this.chitietHD_panel.Controls.Add(this.SDTKhachHang);
+            this.chitietHD_panel.Controls.Add(this.maKhachHang);
             this.chitietHD_panel.Controls.Add(this.print_buttton);
             this.chitietHD_panel.Controls.Add(this.TongCong_value);
             this.chitietHD_panel.Controls.Add(this.MaHDvalue_label);
@@ -119,6 +127,14 @@
             this.chitietHD_panel.Name = "chitietHD_panel";
             this.chitietHD_panel.Size = new System.Drawing.Size(435, 775);
             this.chitietHD_panel.TabIndex = 1;
+            // 
+            // TongTien_value
+            // 
+            this.TongTien_value.Location = new System.Drawing.Point(6, 433);
+            this.TongTien_value.Name = "TongTien_value";
+            this.TongTien_value.Size = new System.Drawing.Size(424, 22);
+            this.TongTien_value.TabIndex = 9;
+            this.TongTien_value.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // print_buttton
             // 
@@ -135,7 +151,7 @@
             // 
             this.TongCong_value.AutoSize = true;
             this.TongCong_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongCong_value.Location = new System.Drawing.Point(7, 447);
+            this.TongCong_value.Location = new System.Drawing.Point(7, 666);
             this.TongCong_value.Name = "TongCong_value";
             this.TongCong_value.Size = new System.Drawing.Size(58, 20);
             this.TongCong_value.TabIndex = 7;
@@ -165,7 +181,7 @@
             // 
             this.TongCong_label.AutoSize = true;
             this.TongCong_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongCong_label.Location = new System.Drawing.Point(5, 414);
+            this.TongCong_label.Location = new System.Drawing.Point(5, 633);
             this.TongCong_label.Name = "TongCong_label";
             this.TongCong_label.Size = new System.Drawing.Size(336, 22);
             this.TongCong_label.TabIndex = 3;
@@ -175,7 +191,7 @@
             // 
             this.Tongtien_label.AutoSize = true;
             this.Tongtien_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tongtien_label.Location = new System.Drawing.Point(5, 335);
+            this.Tongtien_label.Location = new System.Drawing.Point(5, 399);
             this.Tongtien_label.Name = "Tongtien_label";
             this.Tongtien_label.Size = new System.Drawing.Size(187, 22);
             this.Tongtien_label.TabIndex = 2;
@@ -271,6 +287,7 @@
             this.huy_button.TabIndex = 8;
             this.huy_button.Text = "Hủy";
             this.huy_button.UseVisualStyleBackColor = true;
+            this.huy_button.Click += new System.EventHandler(this.huy_button_Click);
             // 
             // modify_icon
             // 
@@ -291,6 +308,7 @@
             this.sua_button.TabIndex = 7;
             this.sua_button.Text = "Sửa";
             this.sua_button.UseVisualStyleBackColor = true;
+            this.sua_button.Click += new System.EventHandler(this.sua_button_Click);
             // 
             // delete_icon
             // 
@@ -311,6 +329,7 @@
             this.xoa_button.TabIndex = 6;
             this.xoa_button.Text = "Xóa";
             this.xoa_button.UseVisualStyleBackColor = true;
+            this.xoa_button.Click += new System.EventHandler(this.xoa_button_Click);
             // 
             // add_icon
             // 
@@ -331,6 +350,7 @@
             this.them_button.TabIndex = 5;
             this.them_button.Text = "Thêm";
             this.them_button.UseVisualStyleBackColor = true;
+            this.them_button.Click += new System.EventHandler(this.them_button_Click);
             // 
             // label1
             // 
@@ -338,25 +358,53 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 267);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 22);
+            this.label1.Size = new System.Drawing.Size(151, 22);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Số Điện Thoại";
+            this.label1.Text = "Mã Khách Hàng";
             // 
-            // SDTKhachHang
+            // maKhachHang
             // 
-            this.SDTKhachHang.Location = new System.Drawing.Point(6, 293);
-            this.SDTKhachHang.Name = "SDTKhachHang";
-            this.SDTKhachHang.Size = new System.Drawing.Size(424, 22);
-            this.SDTKhachHang.TabIndex = 9;
-            this.SDTKhachHang.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.maKhachHang.Location = new System.Drawing.Point(6, 293);
+            this.maKhachHang.Name = "maKhachHang";
+            this.maKhachHang.Size = new System.Drawing.Size(424, 22);
+            this.maKhachHang.TabIndex = 9;
+            this.maKhachHang.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // TongTien_value
+            // maSanPham
             // 
-            this.TongTien_value.Location = new System.Drawing.Point(6, 369);
-            this.TongTien_value.Name = "TongTien_value";
-            this.TongTien_value.Size = new System.Drawing.Size(424, 22);
-            this.TongTien_value.TabIndex = 9;
-            this.TongTien_value.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.maSanPham.Location = new System.Drawing.Point(4, 356);
+            this.maSanPham.Name = "maSanPham";
+            this.maSanPham.Size = new System.Drawing.Size(424, 22);
+            this.maSanPham.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 330);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 22);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Mã Sản Phẩm";
+            // 
+            // mota_groupbox
+            // 
+            this.mota_groupbox.Controls.Add(this.mota_textbox);
+            this.mota_groupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mota_groupbox.Location = new System.Drawing.Point(3, 461);
+            this.mota_groupbox.Name = "mota_groupbox";
+            this.mota_groupbox.Size = new System.Drawing.Size(417, 169);
+            this.mota_groupbox.TabIndex = 12;
+            this.mota_groupbox.TabStop = false;
+            this.mota_groupbox.Text = "Mô tả";
+            // 
+            // mota_textbox
+            // 
+            this.mota_textbox.Location = new System.Drawing.Point(6, 27);
+            this.mota_textbox.Multiline = true;
+            this.mota_textbox.Name = "mota_textbox";
+            this.mota_textbox.Size = new System.Drawing.Size(419, 136);
+            this.mota_textbox.TabIndex = 0;
             // 
             // QLHoaDon
             // 
@@ -381,6 +429,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.modify_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delete_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add_icon)).EndInit();
+            this.mota_groupbox.ResumeLayout(false);
+            this.mota_groupbox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -411,8 +461,12 @@
         private System.Windows.Forms.PictureBox delete_icon;
         private System.Windows.Forms.PictureBox add_icon;
         private System.Windows.Forms.Button print_buttton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox SDTKhachHang;
         private System.Windows.Forms.TextBox TongTien_value;
+        private System.Windows.Forms.TextBox maSanPham;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox maKhachHang;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox mota_groupbox;
+        private System.Windows.Forms.TextBox mota_textbox;
     }
 }

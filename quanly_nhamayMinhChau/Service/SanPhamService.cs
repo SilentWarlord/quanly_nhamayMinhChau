@@ -42,7 +42,7 @@ namespace quanly_nhamayMinhChau.Service
         {
             using (conn = Connection.GetConnection()) 
             {
-                string query = "INSERT INTO SanPham VALUE(@maSanPham,@tenSanPham)";
+                string query = "INSERT INTO SanPham VALUES(@maSanPham,@tenSanPham)";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@maSanPham", sanPham.maSanPham);
@@ -85,12 +85,31 @@ namespace quanly_nhamayMinhChau.Service
                 conn.Close();
             }
         }
-        public void Search()
+        public List<SanPham> Search(string type, string key)
         {
             using (conn = Connection.GetConnection()) 
             {
-            
+                string query = "SELECT * FROM NhanVien WHERE " + type + " LIKE '%" + key + "%'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    SanPham sanPham = new SanPham();
+                    sanPham.maSanPham = (string)reader["maSanPham"];
+                    sanPham.tenSanPham = (string)reader["tenSanPham"];
+                    list.Add(sanPham);
+                }
             }
+            conn.Close();
+            return list;
+        }
+    
+        public string GetID()
+        {
+            return lastid;
         }
     }
 }

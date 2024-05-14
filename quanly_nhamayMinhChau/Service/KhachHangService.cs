@@ -46,7 +46,7 @@ namespace quanly_nhamayMinhChau.Service
         {
             using(conn = Connection.GetConnection())
             {
-                string query = "INSERT INTO KhachHang VALUE(@maKhachHang,@tenKhachHang,@SDT,@diaChi,@ngaySinh) ";
+                string query = "INSERT INTO KhachHang VALUES(@maKhachHang,@tenKhachHang,@SDT,@diaChi,@ngaySinh) ";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@maKhachHang",khachHang.maKhachHang);

@@ -43,5 +43,16 @@ namespace quanly_nhamayMinhChau.Controller
         {
             service.Delete(maDonHang);
         }
+
+        public string GetNextId()
+        {
+            string lastid = service.GetID();
+            string[] separatingStrings = { "NV", "KH", "NL", "SP", "DH" };
+
+            Console.WriteLine(lastid);
+            string[] nextNum = lastid.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+            int num = int.Parse(nextNum[0]) + 1;
+            return "DH00" + num.ToString();
+        }
     }
 }

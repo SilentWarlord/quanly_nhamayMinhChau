@@ -47,7 +47,7 @@ namespace quanly_nhamayMinhChau.Service
         {
             using (conn = Connection.GetConnection()) 
             {
-                string query = "INSERT INTO NguyenLieu VALUE(@maNL,@tenNL,@soLuong,@DVD,@giaThanh,@ngayNhap)";
+                string query = "INSERT INTO NguyenLieu VALUES(@maNL,@tenNL,@soLuong,@DVD,@giaThanh,@ngayNhap)";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@maNL", nguyenLieu.maNL);

@@ -58,6 +58,12 @@
     <Compile Include="forms\Forgot_pass_form.Designer.cs">
       <DependentUpon>Forgot_pass_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\NhanVienDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\NhanVienDetail.Designer.cs">
+      <DependentUpon>NhanVienDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Printform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,8 +153,17 @@
     <Compile Include="usercontrol\ThongKe.Designer.cs">
       <DependentUpon>ThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="usercontrol\AddNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrol\AddNhanVien.Designer.cs">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="forms\Forgot_pass_form.resx">
       <DependentUpon>Forgot_pass_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\NhanVienDetail.resx">
+      <DependentUpon>NhanVienDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Printform.resx">
       <DependentUpon>Printform.cs</DependentUpon>
@@ -193,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="usercontrol\ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercontrol\AddNhanVien.resx">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

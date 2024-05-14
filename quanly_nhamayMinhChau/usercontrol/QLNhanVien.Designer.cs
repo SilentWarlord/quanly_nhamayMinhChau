@@ -34,15 +34,15 @@
             this.QLNhanVien_label = new System.Windows.Forms.Label();
             this.QLNhanVien_picturebox = new System.Windows.Forms.PictureBox();
             this.chucnang_panel = new System.Windows.Forms.Panel();
+            this.txt_SearchType = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_SearchKey = new System.Windows.Forms.TextBox();
             this.cancel_icon = new System.Windows.Forms.PictureBox();
             this.delete_icon = new System.Windows.Forms.PictureBox();
             this.add_icon = new System.Windows.Forms.PictureBox();
             this.huy_button = new System.Windows.Forms.Button();
             this.xoa_button = new System.Windows.Forms.Button();
             this.them_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvien_datagridview)).BeginInit();
             this.head_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QLNhanVien_picturebox)).BeginInit();
@@ -63,6 +63,7 @@
             this.nhanvien_datagridview.Size = new System.Drawing.Size(1180, 716);
             this.nhanvien_datagridview.TabIndex = 10;
             this.nhanvien_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Nhanvien_datagridview_CellContentClick);
+            this.nhanvien_datagridview.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.nhanvien_datagridview_CellContentDoubleClick);
             // 
             // head_panel
             // 
@@ -98,9 +99,9 @@
             // chucnang_panel
             // 
             this.chucnang_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.chucnang_panel.Controls.Add(this.comboBox1);
+            this.chucnang_panel.Controls.Add(this.txt_SearchType);
             this.chucnang_panel.Controls.Add(this.label1);
-            this.chucnang_panel.Controls.Add(this.textBox1);
+            this.chucnang_panel.Controls.Add(this.txt_SearchKey);
             this.chucnang_panel.Controls.Add(this.cancel_icon);
             this.chucnang_panel.Controls.Add(this.delete_icon);
             this.chucnang_panel.Controls.Add(this.add_icon);
@@ -112,6 +113,33 @@
             this.chucnang_panel.Name = "chucnang_panel";
             this.chucnang_panel.Size = new System.Drawing.Size(1180, 59);
             this.chucnang_panel.TabIndex = 11;
+            // 
+            // txt_SearchType
+            // 
+            this.txt_SearchType.FormattingEnabled = true;
+            this.txt_SearchType.Location = new System.Drawing.Point(899, 17);
+            this.txt_SearchType.Name = "txt_SearchType";
+            this.txt_SearchType.Size = new System.Drawing.Size(121, 24);
+            this.txt_SearchType.TabIndex = 23;
+            this.txt_SearchType.Text = "SDT";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(639, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Tìm kiếm";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txt_SearchKey
+            // 
+            this.txt_SearchKey.Location = new System.Drawing.Point(707, 17);
+            this.txt_SearchKey.Name = "txt_SearchKey";
+            this.txt_SearchKey.Size = new System.Drawing.Size(186, 22);
+            this.txt_SearchKey.TabIndex = 21;
+            this.txt_SearchKey.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // cancel_icon
             // 
@@ -152,6 +180,7 @@
             this.huy_button.TabIndex = 8;
             this.huy_button.Text = "Hủy";
             this.huy_button.UseVisualStyleBackColor = true;
+            this.huy_button.Click += new System.EventHandler(this.huy_button_Click);
             // 
             // xoa_button
             // 
@@ -162,43 +191,18 @@
             this.xoa_button.TabIndex = 6;
             this.xoa_button.Text = "Xóa";
             this.xoa_button.UseVisualStyleBackColor = true;
+            this.xoa_button.Click += new System.EventHandler(this.xoa_button_Click);
             // 
             // them_button
             // 
             this.them_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.them_button.Location = new System.Drawing.Point(85, 1);
+            this.them_button.Location = new System.Drawing.Point(93, -2);
             this.them_button.Name = "them_button";
             this.them_button.Size = new System.Drawing.Size(142, 53);
             this.them_button.TabIndex = 5;
             this.them_button.Text = "Thêm";
             this.them_button.UseVisualStyleBackColor = true;
             this.them_button.Click += new System.EventHandler(this.them_button_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(707, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 22);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(639, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Tìm kiếm";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(899, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 23;
             // 
             // QLNhanVien
             // 
@@ -235,8 +239,8 @@
         private System.Windows.Forms.Button huy_button;
         private System.Windows.Forms.Button xoa_button;
         private System.Windows.Forms.Button them_button;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_SearchKey;
+        private System.Windows.Forms.ComboBox txt_SearchType;
         private System.Windows.Forms.Label label1;
     }
 }

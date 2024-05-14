@@ -20,11 +20,26 @@ namespace quanly_nhamayMinhChau.usercontrol
 
 
         }
-        protected override void OnLoad(EventArgs e)
+
+        public void FormLoad()
         {
             sanpham_datagridview.DataSource = controller.GetAll();
-
+            //txt_ma.Text = controller.GetNextId();
+        }
+        protected override void OnLoad(EventArgs e)
+        {
+            FormLoad();
             base.OnLoad(e);
+        }
+
+        private void motaSP_usercontrol_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sanpham_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

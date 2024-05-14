@@ -44,7 +44,7 @@ namespace quanly_nhamayMinhChau.Service
         {
             using (conn = Connection.GetConnection()) 
             {
-                string query = "INSERT INTO DonHang VALUE(@maDonHang,@maKhachHang,@maSanPham,@moTa,@thanhTien) ";
+                string query = "INSERT INTO DonHang VALUES(@maDonHang,@maKhachHang,@maSanPham,@moTa,@thanhTien) ";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@maDonHang", donHang.maDonHang);
@@ -96,6 +96,10 @@ namespace quanly_nhamayMinhChau.Service
         public void Search() 
         {
             using (conn = Connection.GetConnection()) { }
+        }
+        public string GetID()
+        {
+            return lastid;
         }
     }
 }

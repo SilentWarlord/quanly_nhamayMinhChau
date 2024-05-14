@@ -7,7 +7,7 @@ using System.Web;
 
 namespace quanly_nhamayMinhChau.Models
 {
-    internal class NhanVien
+    public class NhanVien
     {
         public string maNhanVien {  get; set; }
         public string tenNhanVien { get; set;}

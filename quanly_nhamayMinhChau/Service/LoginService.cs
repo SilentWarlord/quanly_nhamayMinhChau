@@ -26,13 +26,10 @@ namespace quanly_nhamayMinhChau.Service
 
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                Console.WriteLine(reader.HasRows);
+                 if (reader.HasRows == true)
                 {
-
-                }
-
-                if (reader != null)
-                {
+                    reader.Read();
                     nhanVien = new NhanVien();
                     //nhan vien
                     nhanVien.maNhanVien = (string)reader["maNhanVien"];
