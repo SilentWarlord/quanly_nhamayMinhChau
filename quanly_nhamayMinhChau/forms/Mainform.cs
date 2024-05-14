@@ -1,4 +1,5 @@
-﻿using quanly_nhamayMinhChau.Service;
+﻿using quanly_nhamayMinhChau.Models;
+using quanly_nhamayMinhChau.Service;
 using quanly_nhamayMinhChau.usercontrol;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,57 @@ namespace quanly_nhamayMinhChau
 {
     public partial class Mainform : Form
     {
+        NhanVien nhanVien;
         public Mainform()
         {
             InitializeComponent();
         }
 
+        public Mainform(NhanVien nhanVien)
+        {
+            InitializeComponent();
+            this.nhanVien = nhanVien;
+            tenNhanVien.Text = nhanVien.tenNhanVien;
+            Role();
+        }
+        public void Role()
+        {
+            SP__button.Enabled = false;
+            HoaDon__button.Enabled=false;
+            QLKH__button.Enabled = false;
+            QLNV_button.Enabled = false;
+            QLVL_button.Enabled=false;
+            ThongKe_button.Enabled = false;
+            switch (nhanVien.chucVu) 
+            {
+                case "HoaDon":
+                    HoaDon__button.Enabled = true;
+                    break;
+                case "SanPham":
+                    SP__button.Enabled = true;
+                    break ;
+                case "NhanSu":
+                    QLNV_button.Enabled = true;
+                    break;
+                case "VatDung":
+                    QLVL_button.Enabled = true;
+                    break ;
+                case "KhachHang":
+                    QLKH__button.Enabled = true;
+                    break ;
+                case "KeToan":
+                    ThongKe_button.Enabled = true;
+                    break ;
+                case "admin":
+                    SP__button.Enabled = true;
+                    HoaDon__button.Enabled = true;
+                    QLKH__button.Enabled = true;
+                    QLNV_button.Enabled = true;
+                    QLVL_button.Enabled = true;
+                    ThongKe_button.Enabled = true;
+                    break ;
+            }
+        }
         private void Mainform_Load(object sender, EventArgs e)
         {
             
@@ -64,6 +111,16 @@ namespace quanly_nhamayMinhChau
             Form startForm = new Startform();
             startForm.Show();
             this.Close();
+        }
+
+        private void tenNhanVien_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

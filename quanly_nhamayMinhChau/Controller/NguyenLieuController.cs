@@ -38,7 +38,10 @@ namespace quanly_nhamayMinhChau.Controller
 
             service.Update(nguyenLieu);
         }
-
+        public List<NguyenLieu> Search(string type, string key)
+        {
+            return service.Search(type, key);
+        }
         public void Delete(string maNL)
         {
             service.Delete(maNL);

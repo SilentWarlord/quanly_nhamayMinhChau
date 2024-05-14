@@ -37,6 +37,10 @@ namespace quanly_nhamayMinhChau.Controller
         {
             service.Delete(maSanPham);
         }
+        public List<SanPham> Search(string type, string key)
+        {
+            return service.Search(type, key);
+        }
         public string GetNextId()
         {
             string lastid = service.GetID();

@@ -93,9 +93,29 @@ namespace quanly_nhamayMinhChau.Service
                 conn.Close();
             }
         }
-        public void Search() 
+        public List<DonHang> Search(string type, string key)
         {
-            using (conn = Connection.GetConnection()) { }
+            using (conn = Connection.GetConnection())
+            {
+                string query = "SELECT * FROM DonHang WHERE " + type + " LIKE '%" + key + "%'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    DonHang donHang = new DonHang();
+                    donHang.maDonHang = (string)reader["maDonHang"];
+                    donHang.maKhachHang = (string)reader["maKhachHang"];
+                    donHang.maSanPham = (string)reader["maSanPham"];
+                    donHang.moTa = (string)reader["moTa"];
+                    donHang.thanhTien = (int)reader["thanhTien"];
+                    list.Add(donHang);
+                }
+            }
+            conn.Close();
+            return list;
         }
         public string GetID()
         {

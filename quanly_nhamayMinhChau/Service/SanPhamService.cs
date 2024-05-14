@@ -89,7 +89,7 @@ namespace quanly_nhamayMinhChau.Service
         {
             using (conn = Connection.GetConnection()) 
             {
-                string query = "SELECT * FROM NhanVien WHERE " + type + " LIKE '%" + key + "%'";
+                string query = "SELECT * FROM SanPham WHERE " + type + " LIKE '%" + key + "%'";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 conn.Open();

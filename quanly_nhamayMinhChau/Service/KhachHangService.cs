@@ -98,5 +98,29 @@ namespace quanly_nhamayMinhChau.Service
                 conn.Close();
             }
         }
+        public List<KhachHang> Search(string type, string key)
+        {
+            using (conn = Connection.GetConnection())
+            {
+                string query = "SELECT * FROM KhachHang WHERE " + type + " LIKE '%" + key + "%'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    KhachHang kh = new KhachHang();
+                    kh.maKhachHang = (string)reader["maKhachHang"];
+                    kh.tenKhachHang = (string)reader["tenKhachHang"];
+                    kh.SDT = (string)reader["SDT"];
+                    kh.diaChi = (string)reader["diaChi"];
+                    kh.ngaySinh = (DateTime)reader["ngaySinh"];
+                    list.Add(kh);
+                }
+            }
+            conn.Close();
+            return list;
+        }
     }
 }

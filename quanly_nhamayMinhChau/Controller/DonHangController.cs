@@ -43,6 +43,10 @@ namespace quanly_nhamayMinhChau.Controller
         {
             service.Delete(maDonHang);
         }
+        public List<DonHang> Search(string type, string key)
+        {
+            return service.Search(type, key);
+        }
 
         public string GetNextId()
         {

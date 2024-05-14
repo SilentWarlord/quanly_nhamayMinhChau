@@ -13,8 +13,7 @@ namespace quanly_nhamayMinhChau.Controller
     internal class LoginControler
     {
         LoginService service = new LoginService();
-        NhanVienService nhanVienService = new NhanVienService();
-        NhanVien nv;
+        NhanVien nv ;
 
         public Boolean Login(string SDT, string password)
         {
@@ -58,6 +57,11 @@ namespace quanly_nhamayMinhChau.Controller
         public void ForgotPass()
         {
 
+        }
+
+        public NhanVien Detail()
+        {
+            return service.Detail();
         }
     }
 }

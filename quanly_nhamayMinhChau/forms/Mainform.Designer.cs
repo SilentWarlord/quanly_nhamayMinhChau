@@ -41,6 +41,8 @@
             this.HoaDon__button = new System.Windows.Forms.Button();
             this.SP__button = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
+            this.tenNhanVien = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.maintheme_usercontrol = new quanly_nhamayMinhChau.usercontrol.MainTheme();
             this.thongke_usercontrol = new quanly_nhamayMinhChau.usercontrol.ThongKe();
             this.quanlynvl__usercontrol = new quanly_nhamayMinhChau.usercontrol.QuanLyNVL();
@@ -57,6 +59,8 @@
             // 
             this.Listchucnang_panel.BackColor = System.Drawing.Color.DarkSlateGray;
             this.Listchucnang_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Listchucnang_panel.Controls.Add(this.tenNhanVien);
+            this.Listchucnang_panel.Controls.Add(this.label2);
             this.Listchucnang_panel.Controls.Add(this.logout_button);
             this.Listchucnang_panel.Controls.Add(this.logo_panel);
             this.Listchucnang_panel.Controls.Add(this.ThongKe_button);
@@ -235,6 +239,28 @@
             this.main_panel.Size = new System.Drawing.Size(1180, 875);
             this.main_panel.TabIndex = 1;
             // 
+            // tenNhanVien
+            // 
+            this.tenNhanVien.AutoSize = true;
+            this.tenNhanVien.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenNhanVien.Location = new System.Drawing.Point(88, 108);
+            this.tenNhanVien.Name = "tenNhanVien";
+            this.tenNhanVien.Size = new System.Drawing.Size(95, 31);
+            this.tenNhanVien.TabIndex = 9;
+            this.tenNhanVien.Text = "[None]";
+            this.tenNhanVien.Click += new System.EventHandler(this.tenNhanVien_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 31);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Chào ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // maintheme_usercontrol
             // 
             this.maintheme_usercontrol.BackColor = System.Drawing.Color.Honeydew;
@@ -308,6 +334,7 @@
             this.Text = "Mainform";
             this.Load += new System.EventHandler(this.Mainform_Load);
             this.Listchucnang_panel.ResumeLayout(false);
+            this.Listchucnang_panel.PerformLayout();
             this.logo_panel.ResumeLayout(false);
             this.logo_panel.PerformLayout();
             this.main_panel.ResumeLayout(false);
@@ -337,5 +364,7 @@
         private System.Windows.Forms.Label head2_label;
         private System.Windows.Forms.Label head1_label;
         private System.Windows.Forms.Button logout_button;
+        private System.Windows.Forms.Label tenNhanVien;
+        private System.Windows.Forms.Label label2;
     }
 }

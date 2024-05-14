@@ -40,7 +40,8 @@ namespace quanly_nhamayMinhChau
             //thuc hein cac buoc xac minh tai khoan..
             if (controler.Login(username_textBox.Text, pass_textBox.Text))
             {
-                Form mainForm = new Mainform();
+                
+                Form mainForm = new Mainform(controler.Detail());
                 
                 mainForm.Show();
                 for (int i = Application.OpenForms.Count - 1; i >= 0; i--)

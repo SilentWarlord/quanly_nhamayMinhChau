@@ -42,7 +42,10 @@ namespace quanly_nhamayMinhChau.Controller
 
             service.Update(khachHang);
         }
-
+        public List<KhachHang> Search(string type, string key)
+        {
+            return service.Search(type, key);
+        }
         public void Delete(string maKhachHang)
         {
             service.Delete(maKhachHang);

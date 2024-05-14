@@ -98,9 +98,30 @@ namespace quanly_nhamayMinhChau.Service
                 conn.Close();
             }
         }
-        public void Search()
+        public List<NguyenLieu> Search(string type, string key)
         {
-            using (conn = Connection.GetConnection()) { }
+            using (conn = Connection.GetConnection())
+            {
+                string query = "SELECT * FROM NguyenLieu WHERE " + type + " LIKE '%" + key + "%'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                conn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    NguyenLieu nguyenLieu = new NguyenLieu();
+                    nguyenLieu.maNL = (string)reader["maNL"];
+                    nguyenLieu.tenNL = (string)reader["tenNL"];
+                    nguyenLieu.soLuong = (int)reader["soLuong"];
+                    nguyenLieu.DVD = (string)reader["DVD"];
+                    nguyenLieu.giaThanh = (int)reader["giaThanh"];
+                    nguyenLieu.ngayNhap = (DateTime)reader["ngayNhap"];
+                    list.Add(nguyenLieu);
+                }
+            }
+            conn.Close();
+            return list;
         }
 
     }
